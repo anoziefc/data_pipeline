@@ -1,11 +1,10 @@
 import asyncio
 import json
 import os
+import random
 from pathlib import Path
 from typing import Dict, Optional, Any, List
-from Company_House.company_house import run_business_profiling
-from Ethnicity_Profile.ethnicity_profile import run_ethnicity_check
-from dataclasses import asdict
+from aiolimiter import AsyncLimiter
 
 
 class DataPipeline:
@@ -17,7 +16,7 @@ class DataPipeline:
         self.state = ProcessingState.load_checkpoint(self.logger, self.CONFIG) if resume else ProcessingState()
         self.processing_complete = asyncio.Event()
         self.results = []
-    
+
     async def scan_files(self, file_location: Path) -> List[str]:
         files = [
             f for f in os.listdir(file_location)
@@ -80,7 +79,7 @@ class DataPipeline:
         except Exception as e:
             self.logger.error(f"Producer error: {e}", exc_info=True)
 
-    async def consumer(self, process, worker_id: int):
+    async def consumer(self, process, worker_id: int, limiter=None, semaphore=None):
         try:
             while True:
                 item = await self.queue.get()
@@ -93,15 +92,32 @@ class DataPipeline:
                     _file = item["file"]
                     item_id = item["id"]
                     data = item["data"]
-                    result = await self.process_item(process, dataset, _file, item_id, data)
+
+                    if semaphore and limiter:
+                        async with semaphore:
+                            async with limiter:
+                                result = await self.process_with_limiter(process, dataset, _file, item_id, data)
+                    elif limiter:
+                        async with limiter:
+                            result = await self.process_with_limiter(process, dataset, _file, item_id, data)
+                    elif semaphore:
+                        async with semaphore:
+                            result = await self.process_with_limiter(process, dataset, _file, item_id, data)
+                    else:
+                        result = await self.process_with_limiter(process, dataset, _file, item_id, data)
+
                     if result:
                         key = f"{dataset}:{_file}"
                         self.state.processed_items.setdefault(key, set()).add(item_id)
                         self.state.total_processed += 1
                         self.results.append(result)
-                    
+
                     if self.state.total_processed % self.CONFIG["CHECKPOINT_INTERVAL"] == 0:
                         self.state.save_checkpoint(self.logger, self.CONFIG)
+
+                    if self.state.total_processed % 100 == 0:
+                        self.logger.info(f"[Worker-{worker_id}] Total processed so far: {self.state.total_processed}")
+
                 except Exception as e:
                     self.logger.error(f"Consumer error on item {item.get('id')}: {e}", exc_info=True)
                 finally:
@@ -113,3 +129,18 @@ class DataPipeline:
         self.logger.debug(f"[{dataset}] Processed item {item_id} from {f}")
         retVal = await process(self.logger, data)
         return retVal
+
+    async def process_with_limiter(self, process, dataset, _file, item_id, data):
+        async def wrapped():
+            return await self.process_item(process, dataset, _file, item_id, data)
+        return await self.retry_with_backoff(wrapped)
+
+    async def retry_with_backoff(self, coro, retries=3, base_delay=0.5):
+        for attempt in range(retries):
+            try:
+                return await coro()
+            except Exception as e:
+                if attempt == retries - 1:
+                    raise
+                delay = base_delay * (2 ** attempt) + random.uniform(0, 0.1)
+                await asyncio.sleep(delay)
