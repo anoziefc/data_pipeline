@@ -9,6 +9,7 @@ from Models.models import CompanyInfo, DirectorInfo, FilingInfo, LegalInfo, Busi
 from typing import Dict, Optional, Any
 from pathlib import Path
 from dataclasses import asdict
+from aiolimiter import AsyncLimiter
 
 
 SIC_CODES = Path("Company_House/sic_codes/sic_codes_grouped.json")
