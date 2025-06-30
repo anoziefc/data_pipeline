@@ -67,7 +67,7 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp.get("top_hit", {})
                 else:
-                    print(f"❌ Error {resp.status}: {await resp.text()}")
+                    print(f"❌ Error Company Search {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")
 
@@ -79,7 +79,7 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp
                 else:
-                    print(f"❌ Error {resp.status}: {await resp.text()}")
+                    print(f"❌ Error Company Details {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")
 
@@ -91,68 +91,98 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp
                 else:
-                    print(f"❌ Error {resp.status}: {await resp.text()}")
+                    print(f"❌ Error Fetch Link {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")
-    
-    async def run(self, headers: dict, params: dict):
-        retVal = None
+
+    async def run(self, headers: dict, params: dict) -> BusinessProfile:
         async with aiohttp.ClientSession() as session:
-            search_result = await self.search_company(session, headers, **params)
-            if search_result:
-                company_number = search_result.get("company_number", "")
+            try:
+                search_result = await self.search_company(session, headers, **params)
+                if not search_result:
+                    raise ValueError("No search result found.")
+
+                company_number = search_result.get("company_number")
+                if not company_number:
+                    raise ValueError("Company number missing in search result.")
+
                 company_details = await self.get_company_details(session, headers, company_number)
+                if not company_details:
+                    raise ValueError("Company details not found.")
+
+                # Company Info
                 company_info = CompanyInfo(
-                    company_details.get("company_name", ""),
-                    company_details.get("company_number", ""),
-                    company_details.get("registered_office_address", {}).get("locality", ""),
-                    company_details.get("registered_office_address", {}),
-                    company_details.get("date_of_creation", ""),
-                    "Yes" if company_details.get("company_status") == "active" else "No",
-                    "Yes" if company_details.get("company_status") == "active" else "No",
-                    [self.get_sic_description(sid_codes) for sid_codes in company_details.get("sic_codes", [])],
-                    "No"
-                    )
-                filing_history = company_details.get("links", {}).get("filing_history", "")
-                filing_details = await self.fetch_link(session, filing_history, headers)
-                filing_info = FilingInfo(
-                    latest_account_filing_date=filing_details.get("items")[0].get("date"),
-                    account_filing_in_past_month="Yes" if self.is_last_month(filing_details.get("items")[0].get("date")) else "No",
-                    months_since_last_filing=self.months_diff(filing_details.get("items")[0].get("date"))
+                    company_name=company_details.get("company_name", ""),
+                    company_number=company_details.get("company_number", ""),
+                    uk_city_location=company_details.get("registered_office_address", {}).get("locality", ""),
+                    registered_address=company_details.get("registered_office_address", {}),
+                    active_since_date=company_details.get("date_of_creation", ""),
+                    currently_active="Yes" if company_details.get("company_status") == "active" else "No",
+                    is_the_company_active="Yes" if company_details.get("company_status") == "active" else "No",
+                    industry_of_the_company_from_sic=[self.get_sic_description(code) for code in company_details.get("sic_codes", [])],
+                    vat_registered="No"
                 )
-                officers = company_details.get("links", {}).get("officers", "")
-                director_details = await self.fetch_link(session, officers, headers)
-                director_info = DirectorInfo(
-                    number_of_directors=director_details.get("active_count", ""),
-                    names_of_other_directors=[
-                        _.get("name", "")
-                        for _ in director_details.get("items", [])
-                        if _.get("officer_role") == "director" and _.get("resigned_on", "") == ""
-                    ],
-                    director_age_years=[
-                        {_.get("name", ""): self.age_str(_.get("date_of_birth", {}))}
-                        for _ in director_details.get("items", [])
-                        if _.get("officer_role") == "director" and _.get("resigned_on", "") == ""
-                    ]
-                )
-                charges = company_details.get("links", {}).get("charges", "")
-                if charges:
-                    charges_details = await self.fetch_link(session, charges, headers)
-                    legal_info = LegalInfo(
-                        has_debentures_or_charges="Yes" if charges_details.get("total_count") > 0 else "No",
-                        debentures_status="Has Outstanding" if charges_details.get("part_satisfied_count") > 0 else "All Satisfied",
-                        outstanding_count=charges_details.get("part_satisfied_count"),
-                        satisfied_count=charges_details.get("satisfied_count")
-                    )
-                else:
-                    legal_info = None
-                retVal = BusinessProfile(
+
+                # Filing Info
+                filing_info = FilingInfo()
+                filing_history_link = company_details.get("links", {}).get("filing_history")
+                if filing_history_link:
+                    filing_details = await self.fetch_link(session, filing_history_link, headers)
+                    items = filing_details.get("items", [])
+                    if items:
+                        date_str = items[0].get("date")
+                        if date_str:
+                            filing_info.latest_account_filing_date = date_str
+                            filing_info.account_filing_in_past_month = "Yes" if self.is_last_month(date_str) else "No"
+                            filing_info.months_since_last_filing = self.months_diff(date_str)
+
+                # Director Info
+                director_info = DirectorInfo()
+                officers_link = company_details.get("links", {}).get("officers")
+                if officers_link:
+                    director_details = await self.fetch_link(session, officers_link, headers)
+                    if director_details:
+                        director_info.number_of_directors = director_details.get("active_count", "")
+                        director_info.names_of_other_directors = [
+                            d.get("name", "")
+                            for d in director_details.get("items", [])
+                            if d.get("officer_role") == "director" and not d.get("resigned_on")
+                        ]
+                        director_info.director_age_years = [
+                            {d.get("name", ""): self.age_str(d.get("date_of_birth", {}))}
+                            for d in director_details.get("items", [])
+                            if d.get("officer_role") == "director" and not d.get("resigned_on")
+                        ]
+
+                # Legal Info
+                legal_info = None
+                charges_link = company_details.get("links", {}).get("charges")
+                if charges_link:
+                    charges_details = await self.fetch_link(session, charges_link, headers)
+                    if charges_details:
+                        legal_info = LegalInfo(
+                            has_debentures_or_charges="Yes" if charges_details.get("total_count", 0) > 0 else "No",
+                            debentures_status="Has Outstanding" if charges_details.get("part_satisfied_count", 0) > 0 else "All Satisfied",
+                            outstanding_count=charges_details.get("part_satisfied_count", 0),
+                            satisfied_count=charges_details.get("satisfied_count", 0),
+                        )
+
+                return BusinessProfile(
                     company_info=company_info,
                     director_info=director_info,
                     filing_info=filing_info,
                     legal_info=legal_info
                 )
-        return retVal
+
+            except Exception as e:
+                print(f"⚠️ Exception in CompanyHouseAPI.run(): {e}")
+
+                return BusinessProfile(
+                    company_info=CompanyInfo(),
+                    director_info=DirectorInfo(),
+                    filing_info=FilingInfo(),
+                    legal_info=None
+                )
 
 
 async def run_business_profiling(logger, data: Dict[str, Any]) -> Optional[Dict[str, Any]]:

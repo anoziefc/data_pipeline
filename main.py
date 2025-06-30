@@ -9,7 +9,7 @@ from Company_House.company_house import run_business_profiling
 from Ethnicity_Profile.ethnicity_profile import run_ethnicity_check
 from Loan_Scoring.loan_scoring import run_loan_scoring
 from typing import List
-from convert_to_csv import flatten_all_people_to_dataframe
+# from convert_to_csv import flatten_all_people_to_dataframe
 from aiolimiter import AsyncLimiter
 
 
@@ -89,7 +89,7 @@ async def runner(path, file_name, log_file, config, task_to_run, rate_limit=None
     return pipeline
 
 async def stage_one(path, file_name, log_file, config, run_process, match_data):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(600, 300), max_concurrent_sessions=10)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(2, 1), max_concurrent_sessions=10)
     runner_instance.state.save_checkpoint(log_file, config)
 
     ret = Path("data/matched/matched.json")
@@ -100,7 +100,7 @@ async def stage_one(path, file_name, log_file, config, run_process, match_data):
     return matched
 
 async def stage_two(path, file_name, log_file, config, run_process):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(2000, 60), max_concurrent_sessions=15)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(33, 1), max_concurrent_sessions=15)
     runner_instance.state.save_checkpoint(log_file, config)
     try:
         ret = Path("data/enriched/enriched.json")
@@ -112,7 +112,7 @@ async def stage_two(path, file_name, log_file, config, run_process):
         log_file.error(f"Failed to save results: {e}", exc_info=True)
 
 async def stage_three(path, file_name, log_file, config, run_process):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(500, 60), max_concurrent_sessions=5)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(9, 1), max_concurrent_sessions=5)
     runner_instance.state.save_checkpoint(log_file, config)
     try:
         with open(config["RESPONSE_DATA_PATH"], "w", encoding="utf-8") as f:
