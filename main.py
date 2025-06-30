@@ -40,7 +40,7 @@ def prepare_file(file_path: Path, result_data: List):
     if "trust_pilot" in file_path:
         for content in file_content:
             data = {
-                "source": "Trust Pilot"
+                "source": "Trust Pilot",
                 "full_name": content["full_name"],
                 "companies": content["companies"]
             }
@@ -50,7 +50,7 @@ def prepare_file(file_path: Path, result_data: List):
             suppliers = [_["name"] for _ in content["suppliers"] if len(_) >= 1]
             if len(suppliers) >= 1:
                 data = {
-                    "source": "BidStats"
+                    "source": "BidStats",
                     "companies": suppliers
                 }
                 result_data.append(data)
@@ -59,7 +59,7 @@ def prepare_file(file_path: Path, result_data: List):
             val = []
             val.append(content["Name"])
             data = {
-                "source": "Tax Default"
+                "source": "Tax Default",
                 "companies": val
             }
             result_data.append(data)
@@ -68,12 +68,8 @@ async def runner(path, file_name, log_file, config, task_to_run, rate_limit=None
     ps = ProcessingState()
     pipeline = DataPipeline(ps, log_file, dataset_paths=[path], CONFIG=config, resume=True)
 
-    # limiter = None
     limiter = AsyncLimiter(*rate_limit) if rate_limit else None
     semaphore = asyncio.Semaphore(max_concurrent_sessions) if max_concurrent_sessions else None
-
-    # if rate_limit:
-    #     limiter = AsyncLimiter(max_rate=rate_limit[0], time_period=rate_limit[1])
 
     producer_tasks = [
         asyncio.create_task(pipeline.producer(file_name, path))
@@ -119,10 +115,10 @@ async def stage_three(path, file_name, log_file, config, run_process):
     runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(500, 60), max_concurrent_sessions=5)
     runner_instance.state.save_checkpoint(log_file, config)
     try:
-        with open(config["RESPONSE_PATH"], "w", encoding="utf-8") as f:
+        with open(config["RESPONSE_DATA_PATH"], "w", encoding="utf-8") as f:
             json.dump(runner_instance.results, f, indent=4, ensure_ascii=False)
-        log_file.info(f"Results saved to {config['RESPONSE_PATH']}")
-        return config["RESPONSE_PATH"]
+        log_file.info(f"Results saved to {config['RESPONSE_DATA_PATH']}")
+        return config["RESPONSE_DATA_PATH"]
     except Exception as e:
         log_file.error(f"Failed to save results: {e}", exc_info=True)
     runner_instance.state.save_checkpoint(log_file, config)
