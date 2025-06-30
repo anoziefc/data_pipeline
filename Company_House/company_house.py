@@ -204,7 +204,7 @@ class CompanyHouseAPI:
                 )
 
 
-async def run_business_profiling(logger, data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+async def run_business_profiling(logger, data: Dict[str, Any], limiter: Optional[AsyncLimiter] = None) -> Optional[Dict[str, Any]]:
     COMPANY_HOUSE_API_KEY = os.environ.get("COMPANY_HOUSE_API_KEY")
     auth = base64.b64encode(f"{COMPANY_HOUSE_API_KEY}:".encode()).decode()
     headers = {
@@ -218,7 +218,11 @@ async def run_business_profiling(logger, data: Dict[str, Any]) -> Optional[Dict[
         if k == "companies":
             for company in v:
                 new_company = CompanyHouseAPI()
-                retval = await new_company.run(headers, {"company_name_includes": company})
+                if limiter:
+                    async with limiter:
+                        retval = await new_company.run(headers, {"company_name_includes": company})
+                else:
+                    retval = await new_company.run(headers, {"company_name_includes": company})
                 retval = asdict(retval)
                 retVal.append(retval)
             break

@@ -93,18 +93,11 @@ class DataPipeline:
                     item_id = item["id"]
                     data = item["data"]
 
-                    if semaphore and limiter:
+                    if semaphore:
                         async with semaphore:
-                            async with limiter:
-                                result = await self.process_with_limiter(process, dataset, _file, item_id, data)
-                    elif limiter:
-                        async with limiter:
-                            result = await self.process_with_limiter(process, dataset, _file, item_id, data)
-                    elif semaphore:
-                        async with semaphore:
-                            result = await self.process_with_limiter(process, dataset, _file, item_id, data)
+                            result = await self.process_with_limiter(process, dataset, _file, item_id, data, limiter)
                     else:
-                        result = await self.process_with_limiter(process, dataset, _file, item_id, data)
+                        result = await self.process_with_limiter(process, dataset, _file, item_id, data, limiter)
 
                     if result:
                         key = f"{dataset}:{_file}"
@@ -125,15 +118,20 @@ class DataPipeline:
         except Exception as e:
             self.logger.error(f"Consumer error on item {item.get('id')}: {e}", exc_info=True)
 
-    async def process_item(self, process, dataset: str, f: str, item_id: str, data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    async def process_item(self, process, dataset: str, f: str, item_id: str, data: Dict[str, Any], limiter: Optional[AsyncLimiter] = None) -> Optional[Dict[str, Any]]:
         self.logger.debug(f"[{dataset}] Processed item {item_id} from {f}")
-        retVal = await process(self.logger, data)
+        retVal = await process(self.logger, data, limiter)
         return retVal
 
-    async def process_with_limiter(self, process, dataset, _file, item_id, data):
+    async def process_with_limiter(self, process, dataset, _file, item_id, data, rate_limiter):
         async def wrapped():
-            return await self.process_item(process, dataset, _file, item_id, data)
-        return await self.retry_with_backoff(wrapped)
+            return await self.process_item(process, dataset, _file, item_id, data, rate_limiter)
+
+        async def throttled_retry():
+            async with rate_limiter:
+                return await self.retry_with_backoff(wrapped)
+
+        return await throttled_retry()
 
     async def retry_with_backoff(self, coro, retries=3, base_delay=0.5):
         for attempt in range(retries):
