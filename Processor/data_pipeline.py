@@ -13,7 +13,7 @@ class DataPipeline:
         self.CONFIG = CONFIG
         self.queue = asyncio.Queue(maxsize=self.CONFIG["QUEUE_SIZE"])
         self.dataset_paths = dataset_paths
-        self.state = ProcessingState.load_checkpoint(self.logger, self.CONFIG) if resume else ProcessingState()
+        self.state = ProcessingState.load_checkpoint(self.logger, self.CONFIG) if resume else ProcessingState
         self.processing_complete = asyncio.Event()
         self.results = []
 
@@ -143,4 +143,5 @@ class DataPipeline:
                 if attempt == retries - 1:
                     raise
                 delay = base_delay * (2 ** attempt) + random.uniform(0, 0.1)
+                self.logger.warning(f"[Retry] Attempt {attempt + 1} failed. Retrying in {delay:.2f}s...")
                 await asyncio.sleep(delay)

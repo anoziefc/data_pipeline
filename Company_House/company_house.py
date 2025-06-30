@@ -67,6 +67,13 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp.get("top_hit", {})
                 else:
+                    error_text = await resp.text()
+                    raise aiohttp.ClientResponseError(
+                        status=resp.status,
+                        message=f"Company House API returned {resp.status}: {error_text}",
+                        request_info=resp.request_info,
+                        history=resp.history
+                    )
                     print(f"❌ Error Company Search {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")
@@ -79,6 +86,12 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp
                 else:
+                    raise aiohttp.ClientResponseError(
+                        status=resp.status,
+                        message=f"Company House API returned {resp.status}: {error_text}",
+                        request_info=resp.request_info,
+                        history=resp.history
+                    )
                     print(f"❌ Error Company Details {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")
@@ -91,6 +104,12 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp
                 else:
+                    raise aiohttp.ClientResponseError(
+                        status=resp.status,
+                        message=f"Company House API returned {resp.status}: {error_text}",
+                        request_info=resp.request_info,
+                        history=resp.history
+                    )                    
                     print(f"❌ Error Fetch Link {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")

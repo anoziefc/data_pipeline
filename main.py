@@ -28,9 +28,9 @@ CONFIG = {
     "SOURCE_DATA_PATH": Path("data/data.json"),
     "RESPONSE_DATA_PATH": Path("data/result.json"),
     "CHECKPOINT_DIR": Path("checkpoints/"),
-    "CHECKPOINT_INTERVAL": 100,
-    "QUEUE_SIZE": 500,
-    "MAX_CONCURRENT_REQUESTS": 20
+    "CHECKPOINT_INTERVAL": 5,
+    "QUEUE_SIZE": 10,
+    "MAX_CONCURRENT_REQUESTS": 1
 }
 
 def prepare_file(file_path: Path, result_data: List):
@@ -64,7 +64,7 @@ def prepare_file(file_path: Path, result_data: List):
             }
             result_data.append(data)
 
-async def runner(path, file_name, log_file, config, task_to_run, rate_limit=None, max_concurrent_sessions=None):
+async def runner(path, file_name, log_file, config, task_to_run, rate_limit, max_concurrent_sessions):
     ps = ProcessingState()
     pipeline = DataPipeline(ps, log_file, dataset_paths=[path], CONFIG=config, resume=True)
 
@@ -89,7 +89,7 @@ async def runner(path, file_name, log_file, config, task_to_run, rate_limit=None
     return pipeline
 
 async def stage_one(path, file_name, log_file, config, run_process, match_data):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(2, 1), max_concurrent_sessions=10)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(1, 5), max_concurrent_sessions=1)
     runner_instance.state.save_checkpoint(log_file, config)
 
     ret = Path("data/matched/matched.json")
@@ -100,7 +100,7 @@ async def stage_one(path, file_name, log_file, config, run_process, match_data):
     return matched
 
 async def stage_two(path, file_name, log_file, config, run_process):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(33, 1), max_concurrent_sessions=15)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(9, 1), max_concurrent_sessions=2)
     runner_instance.state.save_checkpoint(log_file, config)
     try:
         ret = Path("data/enriched/enriched.json")
@@ -112,7 +112,7 @@ async def stage_two(path, file_name, log_file, config, run_process):
         log_file.error(f"Failed to save results: {e}", exc_info=True)
 
 async def stage_three(path, file_name, log_file, config, run_process):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(9, 1), max_concurrent_sessions=5)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(9, 1), max_concurrent_sessions=1)
     runner_instance.state.save_checkpoint(log_file, config)
     try:
         with open(config["RESPONSE_DATA_PATH"], "w", encoding="utf-8") as f:
