@@ -1,0 +1,8 @@
+__pycache__
+Bidstats/
+checkpoints/
+NA/
+venv/
+ftp.py
+*.log
+Tax_Default

@@ -1,0 +1,2968 @@
+{
+  "Agriculture, Forestry and Fishing": [
+    {
+      "sic_code": "01110",
+      "description": "Growing of cereals (except rice), leguminous crops and oil seeds"
+    },
+    {
+      "sic_code": "01120",
+      "description": "Growing of rice"
+    },
+    {
+      "sic_code": "01130",
+      "description": "Growing of vegetables and melons, roots and tubers"
+    },
+    {
+      "sic_code": "01140",
+      "description": "Growing of sugar cane"
+    },
+    {
+      "sic_code": "01150",
+      "description": "Growing of tobacco"
+    },
+    {
+      "sic_code": "01160",
+      "description": "Growing of fibre crops"
+    },
+    {
+      "sic_code": "01190",
+      "description": "Growing of other non-perennial crops"
+    },
+    {
+      "sic_code": "01210",
+      "description": "Growing of grapes"
+    },
+    {
+      "sic_code": "01220",
+      "description": "Growing of tropical and subtropical fruits"
+    },
+    {
+      "sic_code": "01230",
+      "description": "Growing of citrus fruits"
+    },
+    {
+      "sic_code": "01240",
+      "description": "Growing of pome fruits and stone fruits"
+    },
+    {
+      "sic_code": "01250",
+      "description": "Growing of other tree and bush fruits and nuts"
+    },
+    {
+      "sic_code": "01260",
+      "description": "Growing of oleaginous fruits"
+    },
+    {
+      "sic_code": "01270",
+      "description": "Growing of beverage crops"
+    },
+    {
+      "sic_code": "01280",
+      "description": "Growing of spices, aromatic, drug and pharmaceutical crops"
+    },
+    {
+      "sic_code": "01290",
+      "description": "Growing of other perennial crops"
+    },
+    {
+      "sic_code": "01300",
+      "description": "Plant propagation"
+    },
+    {
+      "sic_code": "01410",
+      "description": "Raising of dairy cattle"
+    },
+    {
+      "sic_code": "01420",
+      "description": "Raising of other cattle and buffaloes"
+    },
+    {
+      "sic_code": "01430",
+      "description": "Raising of horses and other equines"
+    },
+    {
+      "sic_code": "01440",
+      "description": "Raising of camels and camelids"
+    },
+    {
+      "sic_code": "01450",
+      "description": "Raising of sheep and goats"
+    },
+    {
+      "sic_code": "01460",
+      "description": "Raising of swine/pigs"
+    },
+    {
+      "sic_code": "01470",
+      "description": "Raising of poultry"
+    },
+    {
+      "sic_code": "01490",
+      "description": "Raising of other animals"
+    },
+    {
+      "sic_code": "01500",
+      "description": "Mixed farming"
+    },
+    {
+      "sic_code": "01610",
+      "description": "Support activities for crop production"
+    },
+    {
+      "sic_code": "01621",
+      "description": "Farm animal boarding and care"
+    },
+    {
+      "sic_code": "01629",
+      "description": "Support activities for animal production (other than farm animal boarding and care) n.e.c."
+    },
+    {
+      "sic_code": "01630",
+      "description": "Post-harvest crop activities"
+    },
+    {
+      "sic_code": "01640",
+      "description": "Seed processing for propagation"
+    },
+    {
+      "sic_code": "01700",
+      "description": "Hunting, trapping and related service activities"
+    },
+    {
+      "sic_code": "02100",
+      "description": "Silviculture and other forestry activities"
+    },
+    {
+      "sic_code": "02200",
+      "description": "Logging"
+    },
+    {
+      "sic_code": "02300",
+      "description": "Gathering of wild growing non-wood products"
+    },
+    {
+      "sic_code": "02400",
+      "description": "Support services to forestry"
+    },
+    {
+      "sic_code": "03110",
+      "description": "Marine fishing"
+    },
+    {
+      "sic_code": "03120",
+      "description": "Freshwater fishing"
+    },
+    {
+      "sic_code": "03210",
+      "description": "Marine aquaculture"
+    },
+    {
+      "sic_code": "03220",
+      "description": "Freshwater aquaculture"
+    }
+  ],
+  "Mining and Quarrying" : [
+    {
+      "sic_code": "05101",
+      "description": "Deep coal mines"
+    },
+    {
+      "sic_code": "05102",
+      "description": "Open cast coal working"
+    },
+    {
+      "sic_code": "05200",
+      "description": "Mining of lignite"
+    },
+    {
+      "sic_code": "06100",
+      "description": "Extraction of crude petroleum"
+    },
+    {
+      "sic_code": "06200",
+      "description": "Extraction of natural gas"
+    },
+    {
+      "sic_code": "07100",
+      "description": "Mining of iron ores"
+    },
+    {
+      "sic_code": "07210",
+      "description": "Mining of uranium and thorium ores"
+    },
+    {
+      "sic_code": "07290",
+      "description": "Mining of other non-ferrous metal ores"
+    },
+    {
+      "sic_code": "08110",
+      "description": "Quarrying of ornamental and building stone, limestone, gypsum, chalk and slate"
+    },
+    {
+      "sic_code": "08120",
+      "description": "Operation of gravel and sand pits; mining of clays and kaolin"
+    },
+    {
+      "sic_code": "08910",
+      "description": "Mining of chemical and fertilizer minerals"
+    },
+    {
+      "sic_code": "08920",
+      "description": "Extraction of peat"
+    },
+    {
+      "sic_code": "08930",
+      "description": "Extraction of salt"
+    },
+    {
+      "sic_code": "08990",
+      "description": "Other mining and quarrying n.e.c."
+    },
+    {
+      "sic_code": "09100",
+      "description": "Support activities for petroleum and natural gas mining"
+    },
+    {
+      "sic_code": "09900",
+      "description": "Support activities for other mining and quarrying"
+    }
+  ],
+  "Manufacturing" : [
+    {
+      "sic_code": "10110",
+      "description": "Processing and preserving of meat"
+    },
+    {
+      "sic_code": "10120",
+      "description": "Processing and preserving of poultry meat"
+    },
+    {
+      "sic_code": "10130",
+      "description": "Production of meat and poultry meat products"
+    },
+    {
+      "sic_code": "10200",
+      "description": "Processing and preserving of fish, crustaceans and molluscs"
+    },
+    {
+      "sic_code": "10310",
+      "description": "Processing and preserving of potatoes"
+    },
+    {
+      "sic_code": "10320",
+      "description": "Manufacture of fruit and vegetable juice"
+    },
+    {
+      "sic_code": "10390",
+      "description": "Other processing and preserving of fruit and vegetables"
+    },
+    {
+      "sic_code": "10410",
+      "description": "Manufacture of oils and fats"
+    },
+    {
+      "sic_code": "10420",
+      "description": "Manufacture of margarine and similar edible fats"
+    },
+    {
+      "sic_code": "10511",
+      "description": "Liquid milk and cream production"
+    },
+    {
+      "sic_code": "10512",
+      "description": "Butter and cheese production"
+    },
+    {
+      "sic_code": "10519",
+      "description": "Manufacture of other milk products"
+    },
+    {
+      "sic_code": "10520",
+      "description": "Manufacture of ice cream"
+    },
+    {
+      "sic_code": "10611",
+      "description": "Grain milling"
+    },
+    {
+      "sic_code": "10612",
+      "description": "Manufacture of breakfast cereals and cereals-based food"
+    },
+    {
+      "sic_code": "10620",
+      "description": "Manufacture of starches and starch products"
+    },
+    {
+      "sic_code": "10710",
+      "description": "Manufacture of bread; manufacture of fresh pastry goods and cakes"
+    },
+    {
+      "sic_code": "10720",
+      "description": "Manufacture of rusks and biscuits; manufacture of preserved pastry goods and cakes"
+    },
+    {
+      "sic_code": "10730",
+      "description": "Manufacture of macaroni, noodles, couscous and similar farinaceous products"
+    },
+    {
+      "sic_code": "10810",
+      "description": "Manufacture of sugar"
+    },
+    {
+      "sic_code": "10821",
+      "description": "Manufacture of cocoa and chocolate confectionery"
+    },
+    {
+      "sic_code": "10822",
+      "description": "Manufacture of sugar confectionery"
+    },
+    {
+      "sic_code": "10831",
+      "description": "Tea processing"
+    },
+    {
+      "sic_code": "10832",
+      "description": "Production of coffee and coffee substitutes"
+    },
+    {
+      "sic_code": "10840",
+      "description": "Manufacture of condiments and seasonings"
+    },
+    {
+      "sic_code": "10850",
+      "description": "Manufacture of prepared meals and dishes"
+    },
+    {
+      "sic_code": "10860",
+      "description": "Manufacture of homogenized food preparations and dietetic food"
+    },
+    {
+      "sic_code": "10890",
+      "description": "Manufacture of other food products n.e.c."
+    },
+    {
+      "sic_code": "10910",
+      "description": "Manufacture of prepared feeds for farm animals"
+    },
+    {
+      "sic_code": "10920",
+      "description": "Manufacture of prepared pet foods"
+    },
+    {
+      "sic_code": "11010",
+      "description": "Distilling, rectifying and blending of spirits"
+    },
+    {
+      "sic_code": "11020",
+      "description": "Manufacture of wine from grape"
+    },
+    {
+      "sic_code": "11030",
+      "description": "Manufacture of cider and other fruit wines"
+    },
+    {
+      "sic_code": "11040",
+      "description": "Manufacture of other non-distilled fermented beverages"
+    },
+    {
+      "sic_code": "11050",
+      "description": "Manufacture of beer"
+    },
+    {
+      "sic_code": "11060",
+      "description": "Manufacture of malt"
+    },
+    {
+      "sic_code": "11070",
+      "description": "Manufacture of soft drinks; production of mineral waters and other bottled waters"
+    },
+    {
+      "sic_code": "12000",
+      "description": "Manufacture of tobacco products"
+    },
+    {
+      "sic_code": "13100",
+      "description": "Preparation and spinning of textile fibres"
+    },
+    {
+      "sic_code": "13200",
+      "description": "Weaving of textiles"
+    },
+    {
+      "sic_code": "13300",
+      "description": "Finishing of textiles"
+    },
+    {
+      "sic_code": "13910",
+      "description": "Manufacture of knitted and crocheted fabrics"
+    },
+    {
+      "sic_code": "13921",
+      "description": "Manufacture of soft furnishings"
+    },
+    {
+      "sic_code": "13922",
+      "description": "manufacture of canvas goods, sacks, etc."
+    },
+    {
+      "sic_code": "13923",
+      "description": "manufacture of household textiles"
+    },
+    {
+      "sic_code": "13931",
+      "description": "Manufacture of woven or tufted carpets and rugs"
+    },
+    {
+      "sic_code": "13939",
+      "description": "Manufacture of other carpets and rugs"
+    },
+    {
+      "sic_code": "13940",
+      "description": "Manufacture of cordage, rope, twine and netting"
+    },
+    {
+      "sic_code": "13950",
+      "description": "Manufacture of non-wovens and articles made from non-wovens, except apparel"
+    },
+    {
+      "sic_code": "13960",
+      "description": "Manufacture of other technical and industrial textiles"
+    },
+    {
+      "sic_code": "13990",
+      "description": "Manufacture of other textiles n.e.c."
+    },
+    {
+      "sic_code": "14110",
+      "description": "Manufacture of leather clothes"
+    },
+    {
+      "sic_code": "14120",
+      "description": "Manufacture of workwear"
+    },
+    {
+      "sic_code": "14131",
+      "description": "Manufacture of other men's outerwear"
+    },
+    {
+      "sic_code": "14132",
+      "description": "Manufacture of other women's outerwear"
+    },
+    {
+      "sic_code": "14141",
+      "description": "Manufacture of men's underwear"
+    },
+    {
+      "sic_code": "14142",
+      "description": "Manufacture of women's underwear"
+    },
+    {
+      "sic_code": "14190",
+      "description": "Manufacture of other wearing apparel and accessories n.e.c."
+    },
+    {
+      "sic_code": "14200",
+      "description": "Manufacture of articles of fur"
+    },
+    {
+      "sic_code": "14310",
+      "description": "Manufacture of knitted and crocheted hosiery"
+    },
+    {
+      "sic_code": "14390",
+      "description": "Manufacture of other knitted and crocheted apparel"
+    },
+    {
+      "sic_code": "15110",
+      "description": "Tanning and dressing of leather; dressing and dyeing of fur"
+    },
+    {
+      "sic_code": "15120",
+      "description": "Manufacture of luggage, handbags and the like, saddlery and harness"
+    },
+    {
+      "sic_code": "15200",
+      "description": "Manufacture of footwear"
+    },
+    {
+      "sic_code": "16100",
+      "description": "Sawmilling and planing of wood"
+    },
+    {
+      "sic_code": "16210",
+      "description": "Manufacture of veneer sheets and wood-based panels"
+    },
+    {
+      "sic_code": "16220",
+      "description": "Manufacture of assembled parquet floors"
+    },
+    {
+      "sic_code": "16230",
+      "description": "Manufacture of other builders' carpentry and joinery"
+    },
+    {
+      "sic_code": "16240",
+      "description": "Manufacture of wooden containers"
+    },
+    {
+      "sic_code": "16290",
+      "description": "Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials"
+    },
+    {
+      "sic_code": "17110",
+      "description": "Manufacture of pulp"
+    },
+    {
+      "sic_code": "17120",
+      "description": "Manufacture of paper and paperboard"
+    },
+    {
+      "sic_code": "17211",
+      "description": "Manufacture of corrugated paper and paperboard, sacks and bags"
+    },
+    {
+      "sic_code": "17219",
+      "description": "Manufacture of other paper and paperboard containers"
+    },
+    {
+      "sic_code": "17220",
+      "description": "Manufacture of household and sanitary goods and of toilet requisites"
+    },
+    {
+      "sic_code": "17230",
+      "description": "Manufacture of paper stationery"
+    },
+    {
+      "sic_code": "17240",
+      "description": "Manufacture of wallpaper"
+    },
+    {
+      "sic_code": "17290",
+      "description": "Manufacture of other articles of paper and paperboard n.e.c."
+    },
+    {
+      "sic_code": "18110",
+      "description": "Printing of newspapers"
+    },
+    {
+      "sic_code": "18121",
+      "description": "Manufacture of printed labels"
+    },
+    {
+      "sic_code": "18129",
+      "description": "Printing n.e.c."
+    },
+    {
+      "sic_code": "18130",
+      "description": "Pre-press and pre-media services"
+    },
+    {
+      "sic_code": "18140",
+      "description": "Binding and related services"
+    },
+    {
+      "sic_code": "18201",
+      "description": "Reproduction of sound recording"
+    },
+    {
+      "sic_code": "18202",
+      "description": "Reproduction of video recording"
+    },
+    {
+      "sic_code": "18203",
+      "description": "Reproduction of computer media"
+    },
+    {
+      "sic_code": "19100",
+      "description": "Manufacture of coke oven products"
+    },
+    {
+      "sic_code": "19201",
+      "description": "Mineral oil refining"
+    },
+    {
+      "sic_code": "19209",
+      "description": "Other treatment of petroleum products (excluding petrochemicals manufacture)"
+    },
+    {
+      "sic_code": "20110",
+      "description": "Manufacture of industrial gases"
+    },
+    {
+      "sic_code": "20120",
+      "description": "Manufacture of dyes and pigments"
+    },
+    {
+      "sic_code": "20130",
+      "description": "Manufacture of other inorganic basic chemicals"
+    },
+    {
+      "sic_code": "20140",
+      "description": "Manufacture of other organic basic chemicals"
+    },
+    {
+      "sic_code": "20150",
+      "description": "Manufacture of fertilizers and nitrogen compounds"
+    },
+    {
+      "sic_code": "20160",
+      "description": "Manufacture of plastics in primary forms"
+    },
+    {
+      "sic_code": "20170",
+      "description": "Manufacture of synthetic rubber in primary forms"
+    },
+    {
+      "sic_code": "20200",
+      "description": "Manufacture of pesticides and other agrochemical products"
+    },
+    {
+      "sic_code": "20301",
+      "description": "Manufacture of paints, varnishes and similar coatings, mastics and sealants"
+    },
+    {
+      "sic_code": "20302",
+      "description": "Manufacture of printing ink"
+    },
+    {
+      "sic_code": "20411",
+      "description": "Manufacture of soap and detergents"
+    },
+    {
+      "sic_code": "20412",
+      "description": "Manufacture of cleaning and polishing preparations"
+    },
+    {
+      "sic_code": "20420",
+      "description": "Manufacture of perfumes and toilet preparations"
+    },
+    {
+      "sic_code": "20510",
+      "description": "Manufacture of explosives"
+    },
+    {
+      "sic_code": "20520",
+      "description": "Manufacture of glues"
+    },
+    {
+      "sic_code": "20530",
+      "description": "Manufacture of essential oils"
+    },
+    {
+      "sic_code": "20590",
+      "description": "Manufacture of other chemical products n.e.c."
+    },
+    {
+      "sic_code": "20600",
+      "description": "Manufacture of man-made fibres"
+    },
+    {
+      "sic_code": "21100",
+      "description": "Manufacture of basic pharmaceutical products"
+    },
+    {
+      "sic_code": "21200",
+      "description": "Manufacture of pharmaceutical preparations"
+    },
+    {
+      "sic_code": "22110",
+      "description": "Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres"
+    },
+    {
+      "sic_code": "22190",
+      "description": "Manufacture of other rubber products"
+    },
+    {
+      "sic_code": "22210",
+      "description": "Manufacture of plastic plates, sheets, tubes and profiles"
+    },
+    {
+      "sic_code": "22220",
+      "description": "Manufacture of plastic packing goods"
+    },
+    {
+      "sic_code": "22230",
+      "description": "Manufacture of builders ware of plastic"
+    },
+    {
+      "sic_code": "22290",
+      "description": "Manufacture of other plastic products"
+    },
+    {
+      "sic_code": "23110",
+      "description": "Manufacture of flat glass"
+    },
+    {
+      "sic_code": "23120",
+      "description": "Shaping and processing of flat glass"
+    },
+    {
+      "sic_code": "23130",
+      "description": "Manufacture of hollow glass"
+    },
+    {
+      "sic_code": "23140",
+      "description": "Manufacture of glass fibres"
+    },
+    {
+      "sic_code": "23190",
+      "description": "Manufacture and processing of other glass, including technical glassware"
+    },
+    {
+      "sic_code": "23200",
+      "description": "Manufacture of refractory products"
+    },
+    {
+      "sic_code": "23310",
+      "description": "Manufacture of ceramic tiles and flags"
+    },
+    {
+      "sic_code": "23320",
+      "description": "Manufacture of bricks, tiles and construction products, in baked clay"
+    },
+    {
+      "sic_code": "23410",
+      "description": "Manufacture of ceramic household and ornamental articles"
+    },
+    {
+      "sic_code": "23420",
+      "description": "Manufacture of ceramic sanitary fixtures"
+    },
+    {
+      "sic_code": "23430",
+      "description": "Manufacture of ceramic insulators and insulating fittings"
+    },
+    {
+      "sic_code": "23440",
+      "description": "Manufacture of other technical ceramic products"
+    },
+    {
+      "sic_code": "23490",
+      "description": "Manufacture of other ceramic products n.e.c."
+    },
+    {
+      "sic_code": "23510",
+      "description": "Manufacture of cement"
+    },
+    {
+      "sic_code": "23520",
+      "description": "Manufacture of lime and plaster"
+    },
+    {
+      "sic_code": "23610",
+      "description": "Manufacture of concrete products for construction purposes"
+    },
+    {
+      "sic_code": "23620",
+      "description": "Manufacture of plaster products for construction purposes"
+    },
+    {
+      "sic_code": "23630",
+      "description": "Manufacture of ready-mixed concrete"
+    },
+    {
+      "sic_code": "23640",
+      "description": "Manufacture of mortars"
+    },
+    {
+      "sic_code": "23650",
+      "description": "Manufacture of fibre cement"
+    },
+    {
+      "sic_code": "23690",
+      "description": "Manufacture of other articles of concrete, plaster and cement"
+    },
+    {
+      "sic_code": "23700",
+      "description": "Cutting, shaping and finishing of stone"
+    },
+    {
+      "sic_code": "23910",
+      "description": "Production of abrasive products"
+    },
+    {
+      "sic_code": "23990",
+      "description": "Manufacture of other non-metallic mineral products n.e.c."
+    },
+    {
+      "sic_code": "24100",
+      "description": "Manufacture of basic iron and steel and of ferro-alloys"
+    },
+    {
+      "sic_code": "24200",
+      "description": "Manufacture of tubes, pipes, hollow profiles and related fittings, of steel"
+    },
+    {
+      "sic_code": "24310",
+      "description": "Cold drawing of bars"
+    },
+    {
+      "sic_code": "24320",
+      "description": "Cold rolling of narrow strip"
+    },
+    {
+      "sic_code": "24330",
+      "description": "Cold forming or folding"
+    },
+    {
+      "sic_code": "24340",
+      "description": "Cold drawing of wire"
+    },
+    {
+      "sic_code": "24410",
+      "description": "Precious metals production"
+    },
+    {
+      "sic_code": "24420",
+      "description": "Aluminium production"
+    },
+    {
+      "sic_code": "24430",
+      "description": "Lead, zinc and tin production"
+    },
+    {
+      "sic_code": "24440",
+      "description": "Copper production"
+    },
+    {
+      "sic_code": "24450",
+      "description": "Other non-ferrous metal production"
+    },
+    {
+      "sic_code": "24460",
+      "description": "Processing of nuclear fuel"
+    },
+    {
+      "sic_code": "24510",
+      "description": "Casting of iron"
+    },
+    {
+      "sic_code": "24520",
+      "description": "Casting of steel"
+    },
+    {
+      "sic_code": "24530",
+      "description": "Casting of light metals"
+    },
+    {
+      "sic_code": "24540",
+      "description": "Casting of other non-ferrous metals"
+    },
+    {
+      "sic_code": "25110",
+      "description": "Manufacture of metal structures and parts of structures"
+    },
+    {
+      "sic_code": "25120",
+      "description": "Manufacture of doors and windows of metal"
+    },
+    {
+      "sic_code": "25210",
+      "description": "Manufacture of central heating radiators and boilers"
+    },
+    {
+      "sic_code": "25290",
+      "description": "Manufacture of other tanks, reservoirs and containers of metal"
+    },
+    {
+      "sic_code": "25300",
+      "description": "Manufacture of steam generators, except central heating hot water boilers"
+    },
+    {
+      "sic_code": "25400",
+      "description": "Manufacture of weapons and ammunition"
+    },
+    {
+      "sic_code": "25500",
+      "description": "Forging, pressing, stamping and roll-forming of metal; powder metallurgy"
+    },
+    {
+      "sic_code": "25610",
+      "description": "Treatment and coating of metals"
+    },
+    {
+      "sic_code": "25620",
+      "description": "Machining"
+    },
+    {
+      "sic_code": "25710",
+      "description": "Manufacture of cutlery"
+    },
+    {
+      "sic_code": "25720",
+      "description": "Manufacture of locks and hinges"
+    },
+    {
+      "sic_code": "25730",
+      "description": "Manufacture of tools"
+    },
+    {
+      "sic_code": "25910",
+      "description": "Manufacture of steel drums and similar containers"
+    },
+    {
+      "sic_code": "25920",
+      "description": "Manufacture of light metal packaging"
+    },
+    {
+      "sic_code": "25930",
+      "description": "Manufacture of wire products, chain and springs"
+    },
+    {
+      "sic_code": "25940",
+      "description": "Manufacture of fasteners and screw machine products"
+    },
+    {
+      "sic_code": "25990",
+      "description": "Manufacture of other fabricated metal products n.e.c."
+    },
+    {
+      "sic_code": "26110",
+      "description": "Manufacture of electronic components"
+    },
+    {
+      "sic_code": "26120",
+      "description": "Manufacture of loaded electronic boards"
+    },
+    {
+      "sic_code": "26200",
+      "description": "Manufacture of computers and peripheral equipment"
+    },
+    {
+      "sic_code": "26301",
+      "description": "Manufacture of telegraph and telephone apparatus and equipment"
+    },
+    {
+      "sic_code": "26309",
+      "description": "Manufacture of communication equipment other than telegraph, and telephone apparatus and equipment"
+    },
+    {
+      "sic_code": "26400",
+      "description": "Manufacture of consumer electronics"
+    },
+    {
+      "sic_code": "26511",
+      "description": "Manufacture of electronic measuring, testing etc. equipment, not for industrial process control"
+    },
+    {
+      "sic_code": "26512",
+      "description": "Manufacture of electronic industrial process control equipment"
+    },
+    {
+      "sic_code": "26513",
+      "description": "Manufacture of non-electronic measuring, testing etc. equipment, not for industrial process control"
+    },
+    {
+      "sic_code": "26514",
+      "description": "Manufacture of non-electronic industrial process control equipment"
+    },
+    {
+      "sic_code": "26520",
+      "description": "Manufacture of watches and clocks"
+    },
+    {
+      "sic_code": "26600",
+      "description": "Manufacture of irradiation, electromedical and electrotherapeutic equipment"
+    },
+    {
+      "sic_code": "26701",
+      "description": "Manufacture of optical precision instruments"
+    },
+    {
+      "sic_code": "26702",
+      "description": "Manufacture of photographic and cinematographic equipment"
+    },
+    {
+      "sic_code": "26800",
+      "description": "Manufacture of magnetic and optical media"
+    },
+    {
+      "sic_code": "27110",
+      "description": "Manufacture of electric motors, generators and transformers"
+    },
+    {
+      "sic_code": "27120",
+      "description": "Manufacture of electricity distribution and control apparatus"
+    },
+    {
+      "sic_code": "27200",
+      "description": "Manufacture of batteries and accumulators"
+    },
+    {
+      "sic_code": "27310",
+      "description": "Manufacture of fibre optic cables"
+    },
+    {
+      "sic_code": "27320",
+      "description": "Manufacture of other electronic and electric wires and cables"
+    },
+    {
+      "sic_code": "27330",
+      "description": "Manufacture of wiring devices"
+    },
+    {
+      "sic_code": "27400",
+      "description": "Manufacture of electric lighting equipment"
+    },
+    {
+      "sic_code": "27510",
+      "description": "Manufacture of electric domestic appliances"
+    },
+    {
+      "sic_code": "27520",
+      "description": "Manufacture of non-electric domestic appliances"
+    },
+    {
+      "sic_code": "27900",
+      "description": "Manufacture of other electrical equipment"
+    },
+    {
+      "sic_code": "28110",
+      "description": "Manufacture of engines and turbines, except aircraft, vehicle and cycle engines"
+    },
+    {
+      "sic_code": "28120",
+      "description": "Manufacture of fluid power equipment"
+    },
+    {
+      "sic_code": "28131",
+      "description": "Manufacture of pumps"
+    },
+    {
+      "sic_code": "28132",
+      "description": "Manufacture of compressors"
+    },
+    {
+      "sic_code": "28140",
+      "description": "Manufacture of taps and valves"
+    },
+    {
+      "sic_code": "28150",
+      "description": "Manufacture of bearings, gears, gearing and driving elements"
+    },
+    {
+      "sic_code": "28210",
+      "description": "Manufacture of ovens, furnaces and furnace burners"
+    },
+    {
+      "sic_code": "28220",
+      "description": "Manufacture of lifting and handling equipment"
+    },
+    {
+      "sic_code": "28230",
+      "description": "Manufacture of office machinery and equipment (except computers and peripheral equipment)"
+    },
+    {
+      "sic_code": "28240",
+      "description": "Manufacture of power-driven hand tools"
+    },
+    {
+      "sic_code": "28250",
+      "description": "Manufacture of non-domestic cooling and ventilation equipment"
+    },
+    {
+      "sic_code": "28290",
+      "description": "Manufacture of other general-purpose machinery n.e.c."
+    },
+    {
+      "sic_code": "28301",
+      "description": "Manufacture of agricultural tractors"
+    },
+    {
+      "sic_code": "28302",
+      "description": "Manufacture of agricultural and forestry machinery other than tractors"
+    },
+    {
+      "sic_code": "28410",
+      "description": "Manufacture of metal forming machinery"
+    },
+    {
+      "sic_code": "28490",
+      "description": "Manufacture of other machine tools"
+    },
+    {
+      "sic_code": "28910",
+      "description": "Manufacture of machinery for metallurgy"
+    },
+    {
+      "sic_code": "28921",
+      "description": "Manufacture of machinery for mining"
+    },
+    {
+      "sic_code": "28922",
+      "description": "Manufacture of earthmoving equipment"
+    },
+    {
+      "sic_code": "28923",
+      "description": "Manufacture of equipment for concrete crushing and screening and roadworks"
+    },
+    {
+      "sic_code": "28930",
+      "description": "Manufacture of machinery for food, beverage and tobacco processing"
+    },
+    {
+      "sic_code": "28940",
+      "description": "Manufacture of machinery for textile, apparel and leather production"
+    },
+    {
+      "sic_code": "28950",
+      "description": "Manufacture of machinery for paper and paperboard production"
+    },
+    {
+      "sic_code": "28960",
+      "description": "Manufacture of plastics and rubber machinery"
+    },
+    {
+      "sic_code": "28990",
+      "description": "Manufacture of other special-purpose machinery n.e.c."
+    },
+    {
+      "sic_code": "29100",
+      "description": "Manufacture of motor vehicles"
+    },
+    {
+      "sic_code": "29201",
+      "description": "Manufacture of bodies (coachwork) for motor vehicles (except caravans)"
+    },
+    {
+      "sic_code": "29202",
+      "description": "Manufacture of trailers and semi-trailers"
+    },
+    {
+      "sic_code": "29203",
+      "description": "Manufacture of caravans"
+    },
+    {
+      "sic_code": "29310",
+      "description": "Manufacture of electrical and electronic equipment for motor vehicles and their engines"
+    },
+    {
+      "sic_code": "29320",
+      "description": "Manufacture of other parts and accessories for motor vehicles"
+    },
+    {
+      "sic_code": "30110",
+      "description": "Building of ships and floating structures"
+    },
+    {
+      "sic_code": "30120",
+      "description": "Building of pleasure and sporting boats"
+    },
+    {
+      "sic_code": "30200",
+      "description": "Manufacture of railway locomotives and rolling stock"
+    },
+    {
+      "sic_code": "30300",
+      "description": "Manufacture of air and spacecraft and related machinery"
+    },
+    {
+      "sic_code": "30400",
+      "description": "Manufacture of military fighting vehicles"
+    },
+    {
+      "sic_code": "30910",
+      "description": "Manufacture of motorcycles"
+    },
+    {
+      "sic_code": "30920",
+      "description": "Manufacture of bicycles and invalid carriages"
+    },
+    {
+      "sic_code": "30990",
+      "description": "Manufacture of other transport equipment n.e.c."
+    },
+    {
+      "sic_code": "31010",
+      "description": "Manufacture of office and shop furniture"
+    },
+    {
+      "sic_code": "31020",
+      "description": "Manufacture of kitchen furniture"
+    },
+    {
+      "sic_code": "31030",
+      "description": "Manufacture of mattresses"
+    },
+    {
+      "sic_code": "31090",
+      "description": "Manufacture of other furniture"
+    },
+    {
+      "sic_code": "32110",
+      "description": "Striking of coins"
+    },
+    {
+      "sic_code": "32120",
+      "description": "Manufacture of jewellery and related articles"
+    },
+    {
+      "sic_code": "32130",
+      "description": "Manufacture of imitation jewellery and related articles"
+    },
+    {
+      "sic_code": "32200",
+      "description": "Manufacture of musical instruments"
+    },
+    {
+      "sic_code": "32300",
+      "description": "Manufacture of sports goods"
+    },
+    {
+      "sic_code": "32401",
+      "description": "Manufacture of professional and arcade games and toys"
+    },
+    {
+      "sic_code": "32409",
+      "description": "Manufacture of other games and toys, n.e.c."
+    },
+    {
+      "sic_code": "32500",
+      "description": "Manufacture of medical and dental instruments and supplies"
+    },
+    {
+      "sic_code": "32910",
+      "description": "Manufacture of brooms and brushes"
+    },
+    {
+      "sic_code": "32990",
+      "description": "Other manufacturing n.e.c."
+    },
+    {
+      "sic_code": "33110",
+      "description": "Repair of fabricated metal products"
+    },
+    {
+      "sic_code": "33120",
+      "description": "Repair of machinery"
+    },
+    {
+      "sic_code": "33130",
+      "description": "Repair of electronic and optical equipment"
+    },
+    {
+      "sic_code": "33140",
+      "description": "Repair of electrical equipment"
+    },
+    {
+      "sic_code": "33150",
+      "description": "Repair and maintenance of ships and boats"
+    },
+    {
+      "sic_code": "33160",
+      "description": "Repair and maintenance of aircraft and spacecraft"
+    },
+    {
+      "sic_code": "33170",
+      "description": "Repair and maintenance of other transport equipment n.e.c."
+    },
+    {
+      "sic_code": "33190",
+      "description": "Repair of other equipment"
+    },
+    {
+      "sic_code": "33200",
+      "description": "Installation of industrial machinery and equipment"
+    }
+  ],
+  "Electricity, gas, steam and air conditioning supply" : [
+    {
+      "sic_code": "35110",
+      "description": "Production of electricity"
+    },
+    {
+      "sic_code": "35120",
+      "description": "Transmission of electricity"
+    },
+    {
+      "sic_code": "35130",
+      "description": "Distribution of electricity"
+    },
+    {
+      "sic_code": "35140",
+      "description": "Trade of electricity"
+    },
+    {
+      "sic_code": "35210",
+      "description": "Manufacture of gas"
+    },
+    {
+      "sic_code": "35220",
+      "description": "Distribution of gaseous fuels through mains"
+    },
+    {
+      "sic_code": "35230",
+      "description": "Trade of gas through mains"
+    },
+    {
+      "sic_code": "35300",
+      "description": "Steam and air conditioning supply"
+    }
+  ],
+  "Water supply, sewerage, waste management and remediation activities" : [
+    {
+      "sic_code": "36000",
+      "description": "Water collection, treatment and supply"
+    },
+    {
+      "sic_code": "37000",
+      "description": "Sewerage"
+    },
+    {
+      "sic_code": "38110",
+      "description": "Collection of non-hazardous waste"
+    },
+    {
+      "sic_code": "38120",
+      "description": "Collection of hazardous waste"
+    },
+    {
+      "sic_code": "38210",
+      "description": "Treatment and disposal of non-hazardous waste"
+    },
+    {
+      "sic_code": "38220",
+      "description": "Treatment and disposal of hazardous waste"
+    },
+    {
+      "sic_code": "38310",
+      "description": "Dismantling of wrecks"
+    },
+    {
+      "sic_code": "38320",
+      "description": "Recovery of sorted materials"
+    },
+    {
+      "sic_code": "39000",
+      "description": "Remediation activities and other waste management services"
+    }
+  ],
+  "Construction" : [
+    {
+      "sic_code": "41100",
+      "description": "Development of building projects"
+    },
+    {
+      "sic_code": "41201",
+      "description": "Construction of commercial buildings"
+    },
+    {
+      "sic_code": "41202",
+      "description": "Construction of domestic buildings"
+    },
+    {
+      "sic_code": "42110",
+      "description": "Construction of roads and motorways"
+    },
+    {
+      "sic_code": "42120",
+      "description": "Construction of railways and underground railways"
+    },
+    {
+      "sic_code": "42130",
+      "description": "Construction of bridges and tunnels"
+    },
+    {
+      "sic_code": "42210",
+      "description": "Construction of utility projects for fluids"
+    },
+    {
+      "sic_code": "42220",
+      "description": "Construction of utility projects for electricity and telecommunications"
+    },
+    {
+      "sic_code": "42910",
+      "description": "Construction of water projects"
+    },
+    {
+      "sic_code": "42990",
+      "description": "Construction of other civil engineering projects n.e.c."
+    },
+    {
+      "sic_code": "43110",
+      "description": "Demolition"
+    },
+    {
+      "sic_code": "43120",
+      "description": "Site preparation"
+    },
+    {
+      "sic_code": "43130",
+      "description": "Test drilling and boring"
+    },
+    {
+      "sic_code": "43210",
+      "description": "Electrical installation"
+    },
+    {
+      "sic_code": "43220",
+      "description": "Plumbing, heat and air-conditioning installation"
+    },
+    {
+      "sic_code": "43290",
+      "description": "Other construction installation"
+    },
+    {
+      "sic_code": "43310",
+      "description": "Plastering"
+    },
+    {
+      "sic_code": "43320",
+      "description": "Joinery installation"
+    },
+    {
+      "sic_code": "43330",
+      "description": "Floor and wall covering"
+    },
+    {
+      "sic_code": "43341",
+      "description": "Painting"
+    },
+    {
+      "sic_code": "43342",
+      "description": "Glazing"
+    },
+    {
+      "sic_code": "43390",
+      "description": "Other building completion and finishing"
+    },
+    {
+      "sic_code": "43910",
+      "description": "Roofing activities"
+    },
+    {
+      "sic_code": "43991",
+      "description": "Scaffold erection"
+    },
+    {
+      "sic_code": "43999",
+      "description": "Other specialised construction activities n.e.c."
+    }
+  ],
+  "Wholesale and retail trade; repair of motor vehicles and motorcycles" : [
+    {
+      "sic_code": "45111",
+      "description": "Sale of new cars and light motor vehicles"
+    },
+    {
+      "sic_code": "45112",
+      "description": "Sale of used cars and light motor vehicles"
+    },
+    {
+      "sic_code": "45190",
+      "description": "Sale of other motor vehicles"
+    },
+    {
+      "sic_code": "45200",
+      "description": "Maintenance and repair of motor vehicles"
+    },
+    {
+      "sic_code": "45310",
+      "description": "Wholesale trade of motor vehicle parts and accessories"
+    },
+    {
+      "sic_code": "45320",
+      "description": "Retail trade of motor vehicle parts and accessories"
+    },
+    {
+      "sic_code": "45400",
+      "description": "Sale, maintenance and repair of motorcycles and related parts and accessories"
+    },
+    {
+      "sic_code": "46110",
+      "description": "Agents selling agricultural raw materials, livestock, textile raw materials and semi-finished goods"
+    },
+    {
+      "sic_code": "46120",
+      "description": "Agents involved in the sale of fuels, ores, metals and industrial chemicals"
+    },
+    {
+      "sic_code": "46130",
+      "description": "Agents involved in the sale of timber and building materials"
+    },
+    {
+      "sic_code": "46140",
+      "description": "Agents involved in the sale of machinery, industrial equipment, ships and aircraft"
+    },
+    {
+      "sic_code": "46150",
+      "description": "Agents involved in the sale of furniture, household goods, hardware and ironmongery"
+    },
+    {
+      "sic_code": "46160",
+      "description": "Agents involved in the sale of textiles, clothing, fur, footwear and leather goods"
+    },
+    {
+      "sic_code": "46170",
+      "description": "Agents involved in the sale of food, beverages and tobacco"
+    },
+    {
+      "sic_code": "46180",
+      "description": "Agents specialised in the sale of other particular products"
+    },
+    {
+      "sic_code": "46190",
+      "description": "Agents involved in the sale of a variety of goods"
+    },
+    {
+      "sic_code": "46210",
+      "description": "Wholesale of grain, unmanufactured tobacco, seeds and animal feeds"
+    },
+    {
+      "sic_code": "46220",
+      "description": "Wholesale of flowers and plants"
+    },
+    {
+      "sic_code": "46230",
+      "description": "Wholesale of live animals"
+    },
+    {
+      "sic_code": "46240",
+      "description": "Wholesale of hides, skins and leather"
+    },
+    {
+      "sic_code": "46310",
+      "description": "Wholesale of fruit and vegetables"
+    },
+    {
+      "sic_code": "46320",
+      "description": "Wholesale of meat and meat products"
+    },
+    {
+      "sic_code": "46330",
+      "description": "Wholesale of dairy products, eggs and edible oils and fats"
+    },
+    {
+      "sic_code": "46341",
+      "description": "Wholesale of fruit and vegetable juices, mineral water and soft drinks"
+    },
+    {
+      "sic_code": "46342",
+      "description": "Wholesale of wine, beer, spirits and other alcoholic beverages"
+    },
+    {
+      "sic_code": "46350",
+      "description": "Wholesale of tobacco products"
+    },
+    {
+      "sic_code": "46360",
+      "description": "Wholesale of sugar and chocolate and sugar confectionery"
+    },
+    {
+      "sic_code": "46370",
+      "description": "Wholesale of coffee, tea, cocoa and spices"
+    },
+    {
+      "sic_code": "46380",
+      "description": "Wholesale of other food, including fish, crustaceans and molluscs"
+    },
+    {
+      "sic_code": "46390",
+      "description": "Non-specialised wholesale of food, beverages and tobacco"
+    },
+    {
+      "sic_code": "46410",
+      "description": "Wholesale of textiles"
+    },
+    {
+      "sic_code": "46420",
+      "description": "Wholesale of clothing and footwear"
+    },
+    {
+      "sic_code": "46431",
+      "description": "Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played"
+    },
+    {
+      "sic_code": "46439",
+      "description": "Wholesale of radio, television goods & electrical household appliances (other than records, tapes, CD's & video tapes and the equipment used for playing them)"
+    },
+    {
+      "sic_code": "46440",
+      "description": "Wholesale of china and glassware and cleaning materials"
+    },
+    {
+      "sic_code": "46450",
+      "description": "Wholesale of perfume and cosmetics"
+    },
+    {
+      "sic_code": "46460",
+      "description": "Wholesale of pharmaceutical goods"
+    },
+    {
+      "sic_code": "46470",
+      "description": "Wholesale of furniture, carpets and lighting equipment"
+    },
+    {
+      "sic_code": "46480",
+      "description": "Wholesale of watches and jewellery"
+    },
+    {
+      "sic_code": "46491",
+      "description": "Wholesale of musical instruments"
+    },
+    {
+      "sic_code": "46499",
+      "description": "Wholesale of household goods (other than musical instruments) n.e.c"
+    },
+    {
+      "sic_code": "46510",
+      "description": "Wholesale of computers, computer peripheral equipment and software"
+    },
+    {
+      "sic_code": "46520",
+      "description": "Wholesale of electronic and telecommunications equipment and parts"
+    },
+    {
+      "sic_code": "46610",
+      "description": "Wholesale of agricultural machinery, equipment and supplies"
+    },
+    {
+      "sic_code": "46620",
+      "description": "Wholesale of machine tools"
+    },
+    {
+      "sic_code": "46630",
+      "description": "Wholesale of mining, construction and civil engineering machinery"
+    },
+    {
+      "sic_code": "46640",
+      "description": "Wholesale of machinery for the textile industry and of sewing and knitting machines"
+    },
+    {
+      "sic_code": "46650",
+      "description": "Wholesale of office furniture"
+    },
+    {
+      "sic_code": "46660",
+      "description": "Wholesale of other office machinery and equipment"
+    },
+    {
+      "sic_code": "46690",
+      "description": "Wholesale of other machinery and equipment"
+    },
+    {
+      "sic_code": "46711",
+      "description": "Wholesale of petroleum and petroleum products"
+    },
+    {
+      "sic_code": "46719",
+      "description": "Wholesale of other fuels and related products"
+    },
+    {
+      "sic_code": "46720",
+      "description": "Wholesale of metals and metal ores"
+    },
+    {
+      "sic_code": "46730",
+      "description": "Wholesale of wood, construction materials and sanitary equipment"
+    },
+    {
+      "sic_code": "46740",
+      "description": "Wholesale of hardware, plumbing and heating equipment and supplies"
+    },
+    {
+      "sic_code": "46750",
+      "description": "Wholesale of chemical products"
+    },
+    {
+      "sic_code": "46760",
+      "description": "Wholesale of other intermediate products"
+    },
+    {
+      "sic_code": "46770",
+      "description": "Wholesale of waste and scrap"
+    },
+    {
+      "sic_code": "46900",
+      "description": "Non-specialised wholesale trade"
+    },
+    {
+      "sic_code": "47110",
+      "description": "Retail sale in non-specialised stores with food, beverages or tobacco predominating"
+    },
+    {
+      "sic_code": "47190",
+      "description": "Other retail sale in non-specialised stores"
+    },
+    {
+      "sic_code": "47210",
+      "description": "Retail sale of fruit and vegetables in specialised stores"
+    },
+    {
+      "sic_code": "47220",
+      "description": "Retail sale of meat and meat products in specialised stores"
+    },
+    {
+      "sic_code": "47230",
+      "description": "Retail sale of fish, crustaceans and molluscs in specialised stores"
+    },
+    {
+      "sic_code": "47240",
+      "description": "Retail sale of bread, cakes, flour confectionery and sugar confectionery in specialised stores"
+    },
+    {
+      "sic_code": "47250",
+      "description": "Retail sale of beverages in specialised stores"
+    },
+    {
+      "sic_code": "47260",
+      "description": "Retail sale of tobacco products in specialised stores"
+    },
+    {
+      "sic_code": "47290",
+      "description": "Other retail sale of food in specialised stores"
+    },
+    {
+      "sic_code": "47300",
+      "description": "Retail sale of automotive fuel in specialised stores"
+    },
+    {
+      "sic_code": "47410",
+      "description": "Retail sale of computers, peripheral units and software in specialised stores"
+    },
+    {
+      "sic_code": "47421",
+      "description": "Retail sale of mobile telephones"
+    },
+    {
+      "sic_code": "47429",
+      "description": "Retail sale of telecommunications equipment other than mobile telephones"
+    },
+    {
+      "sic_code": "47430",
+      "description": "Retail sale of audio and video equipment in specialised stores"
+    },
+    {
+      "sic_code": "47510",
+      "description": "Retail sale of textiles in specialised stores"
+    },
+    {
+      "sic_code": "47520",
+      "description": "Retail sale of hardware, paints and glass in specialised stores"
+    },
+    {
+      "sic_code": "47530",
+      "description": "Retail sale of carpets, rugs, wall and floor coverings in specialised stores"
+    },
+    {
+      "sic_code": "47540",
+      "description": "Retail sale of electrical household appliances in specialised stores"
+    },
+    {
+      "sic_code": "47591",
+      "description": "Retail sale of musical instruments and scores"
+    },
+    {
+      "sic_code": "47599",
+      "description": "Retail of furniture, lighting, and similar (not musical instruments or scores) in specialised store"
+    },
+    {
+      "sic_code": "47610",
+      "description": "Retail sale of books in specialised stores"
+    },
+    {
+      "sic_code": "47620",
+      "description": "Retail sale of newspapers and stationery in specialised stores"
+    },
+    {
+      "sic_code": "47630",
+      "description": "Retail sale of music and video recordings in specialised stores"
+    },
+    {
+      "sic_code": "47640",
+      "description": "Retail sale of sports goods, fishing gear, camping goods, boats and bicycles"
+    },
+    {
+      "sic_code": "47650",
+      "description": "Retail sale of games and toys in specialised stores"
+    },
+    {
+      "sic_code": "47710",
+      "description": "Retail sale of clothing in specialised stores"
+    },
+    {
+      "sic_code": "47721",
+      "description": "Retail sale of footwear in specialised stores"
+    },
+    {
+      "sic_code": "47722",
+      "description": "Retail sale of leather goods in specialised stores"
+    },
+    {
+      "sic_code": "47730",
+      "description": "Dispensing chemist in specialised stores"
+    },
+    {
+      "sic_code": "47741",
+      "description": "Retail sale of hearing aids"
+    },
+    {
+      "sic_code": "47749",
+      "description": "Retail sale of medical and orthopaedic goods in specialised stores (not incl. hearing aids) n.e.c."
+    },
+    {
+      "sic_code": "47750",
+      "description": "Retail sale of cosmetic and toilet articles in specialised stores"
+    },
+    {
+      "sic_code": "47760",
+      "description": "Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores"
+    },
+    {
+      "sic_code": "47770",
+      "description": "Retail sale of watches and jewellery in specialised stores"
+    },
+    {
+      "sic_code": "47781",
+      "description": "Retail sale in commercial art galleries"
+    },
+    {
+      "sic_code": "47782",
+      "description": "Retail sale by opticians"
+    },
+    {
+      "sic_code": "47789",
+      "description": "Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)"
+    },
+    {
+      "sic_code": "47791",
+      "description": "Retail sale of antiques including antique books in stores"
+    },
+    {
+      "sic_code": "47799",
+      "description": "Retail sale of other second-hand goods in stores (not incl. antiques)"
+    },
+    {
+      "sic_code": "47810",
+      "description": "Retail sale via stalls and markets of food, beverages and tobacco products"
+    },
+    {
+      "sic_code": "47820",
+      "description": "Retail sale via stalls and markets of textiles, clothing and footwear"
+    },
+    {
+      "sic_code": "47890",
+      "description": "Retail sale via stalls and markets of other goods"
+    },
+    {
+      "sic_code": "47910",
+      "description": "Retail sale via mail order houses or via Internet"
+    },
+    {
+      "sic_code": "47990",
+      "description": "Other retail sale not in stores, stalls or markets"
+    }
+  ],
+  "Transportation and storage" : [
+    {
+      "sic_code": "49100",
+      "description": "Passenger rail transport, interurban"
+    },
+    {
+      "sic_code": "49200",
+      "description": "Freight rail transport"
+    },
+    {
+      "sic_code": "49311",
+      "description": "Urban and suburban passenger railway transportation by underground, metro and similar systems"
+    },
+    {
+      "sic_code": "49319",
+      "description": "Other urban, suburban or metropolitan passenger land transport (not underground, metro or similar)"
+    },
+    {
+      "sic_code": "49320",
+      "description": "Taxi operation"
+    },
+    {
+      "sic_code": "49390",
+      "description": "Other passenger land transport"
+    },
+    {
+      "sic_code": "49410",
+      "description": "Freight transport by road"
+    },
+    {
+      "sic_code": "49420",
+      "description": "Removal services"
+    },
+    {
+      "sic_code": "49500",
+      "description": "Transport via pipeline"
+    },
+    {
+      "sic_code": "50100",
+      "description": "Sea and coastal passenger water transport"
+    },
+    {
+      "sic_code": "50200",
+      "description": "Sea and coastal freight water transport"
+    },
+    {
+      "sic_code": "50300",
+      "description": "Inland passenger water transport"
+    },
+    {
+      "sic_code": "50400",
+      "description": "Inland freight water transport"
+    },
+    {
+      "sic_code": "51101",
+      "description": "Scheduled passenger air transport"
+    },
+    {
+      "sic_code": "51102",
+      "description": "Non-scheduled passenger air transport"
+    },
+    {
+      "sic_code": "51210",
+      "description": "Freight air transport"
+    },
+    {
+      "sic_code": "51220",
+      "description": "Space transport"
+    },
+    {
+      "sic_code": "52101",
+      "description": "Operation of warehousing and storage facilities for water transport activities"
+    },
+    {
+      "sic_code": "52102",
+      "description": "Operation of warehousing and storage facilities for air transport activities"
+    },
+    {
+      "sic_code": "52103",
+      "description": "Operation of warehousing and storage facilities for land transport activities"
+    },
+    {
+      "sic_code": "52211",
+      "description": "Operation of rail freight terminals"
+    },
+    {
+      "sic_code": "52212",
+      "description": "Operation of rail passenger facilities at railway stations"
+    },
+    {
+      "sic_code": "52213",
+      "description": "Operation of bus and coach passenger facilities at bus and coach stations"
+    },
+    {
+      "sic_code": "52219",
+      "description": "Other service activities incidental to land transportation, n.e.c."
+    },
+    {
+      "sic_code": "52220",
+      "description": "Service activities incidental to water transportation"
+    },
+    {
+      "sic_code": "52230",
+      "description": "Service activities incidental to air transportation"
+    },
+    {
+      "sic_code": "52241",
+      "description": "Cargo handling for water transport activities"
+    },
+    {
+      "sic_code": "52242",
+      "description": "Cargo handling for air transport activities"
+    },
+    {
+      "sic_code": "52243",
+      "description": "Cargo handling for land transport activities"
+    },
+    {
+      "sic_code": "52290",
+      "description": "Other transportation support activities"
+    },
+    {
+      "sic_code": "53100",
+      "description": "Postal activities under universal service obligation"
+    },
+    {
+      "sic_code": "53201",
+      "description": "Licensed carriers"
+    },
+    {
+      "sic_code": "53202",
+      "description": "Unlicensed carriers"
+    }
+  ],
+  "Accommodation and food service activities" : [
+    {
+      "sic_code": "55100",
+      "description": "Hotels and similar accommodation"
+    },
+    {
+      "sic_code": "55201",
+      "description": "Holiday centres and villages"
+    },
+    {
+      "sic_code": "55202",
+      "description": "Youth hostels"
+    },
+    {
+      "sic_code": "55209",
+      "description": "Other holiday and other collective accommodation"
+    },
+    {
+      "sic_code": "55300",
+      "description": "Recreational vehicle parks, trailer parks and camping grounds"
+    },
+    {
+      "sic_code": "55900",
+      "description": "Other accommodation"
+    },
+    {
+      "sic_code": "56101",
+      "description": "Licenced restaurants"
+    },
+    {
+      "sic_code": "56102",
+      "description": "Unlicenced restaurants and cafes"
+    },
+    {
+      "sic_code": "56103",
+      "description": "Take-away food shops and mobile food stands"
+    },
+    {
+      "sic_code": "56210",
+      "description": "Event catering activities"
+    },
+    {
+      "sic_code": "56290",
+      "description": "Other food services"
+    },
+    {
+      "sic_code": "56301",
+      "description": "Licenced clubs"
+    },
+    {
+      "sic_code": "56302",
+      "description": "Public houses and bars"
+    }
+  ],
+  "Information and communication": [
+    {
+      "sic_code": "58110",
+      "description": "Book publishing"
+    },
+    {
+      "sic_code": "58120",
+      "description": "Publishing of directories and mailing lists"
+    },
+    {
+      "sic_code": "58130",
+      "description": "Publishing of newspapers"
+    },
+    {
+      "sic_code": "58141",
+      "description": "Publishing of learned journals"
+    },
+    {
+      "sic_code": "58142",
+      "description": "Publishing of consumer and business journals and periodicals"
+    },
+    {
+      "sic_code": "58190",
+      "description": "Other publishing activities"
+    },
+    {
+      "sic_code": "58210",
+      "description": "Publishing of computer games"
+    },
+    {
+      "sic_code": "58290",
+      "description": "Other software publishing"
+    },
+    {
+      "sic_code": "59111",
+      "description": "Motion picture production activities"
+    },
+    {
+      "sic_code": "59112",
+      "description": "Video production activities"
+    },
+    {
+      "sic_code": "59113",
+      "description": "Television programme production activities"
+    },
+    {
+      "sic_code": "59120",
+      "description": "Motion picture, video and television programme post-production activities"
+    },
+    {
+      "sic_code": "59131",
+      "description": "Motion picture distribution activities"
+    },
+    {
+      "sic_code": "59132",
+      "description": "Video distribution activities"
+    },
+    {
+      "sic_code": "59133",
+      "description": "Television programme distribution activities"
+    },
+    {
+      "sic_code": "59140",
+      "description": "Motion picture projection activities"
+    },
+    {
+      "sic_code": "59200",
+      "description": "Sound recording and music publishing activities"
+    },
+    {
+      "sic_code": "60100",
+      "description": "Radio broadcasting"
+    },
+    {
+      "sic_code": "60200",
+      "description": "Television programming and broadcasting activities"
+    },
+    {
+      "sic_code": "61100",
+      "description": "Wired telecommunications activities"
+    },
+    {
+      "sic_code": "61200",
+      "description": "Wireless telecommunications activities"
+    },
+    {
+      "sic_code": "61300",
+      "description": "Satellite telecommunications activities"
+    },
+    {
+      "sic_code": "61900",
+      "description": "Other telecommunications activities"
+    },
+    {
+      "sic_code": "62011",
+      "description": "Ready-made interactive leisure and entertainment software development"
+    },
+    {
+      "sic_code": "62012",
+      "description": "Business and domestic software development"
+    },
+    {
+      "sic_code": "62020",
+      "description": "Information technology consultancy activities"
+    },
+    {
+      "sic_code": "62030",
+      "description": "Computer facilities management activities"
+    },
+    {
+      "sic_code": "62090",
+      "description": "Other information technology service activities"
+    },
+    {
+      "sic_code": "63110",
+      "description": "Data processing, hosting and related activities"
+    },
+    {
+      "sic_code": "63120",
+      "description": "Web portals"
+    },
+    {
+      "sic_code": "63910",
+      "description": "News agency activities"
+    },
+    {
+      "sic_code": "63990",
+      "description": "Other information service activities n.e.c."
+    }
+  ],
+  "Financial and insurance activities" : [
+    {
+      "sic_code": "64110",
+      "description": "Central banking"
+    },
+    {
+      "sic_code": "64191",
+      "description": "Banks"
+    },
+    {
+      "sic_code": "64192",
+      "description": "Building societies"
+    },
+    {
+      "sic_code": "64201",
+      "description": "Activities of agricultural holding companies"
+    },
+    {
+      "sic_code": "64202",
+      "description": "Activities of production holding companies"
+    },
+    {
+      "sic_code": "64203",
+      "description": "Activities of construction holding companies"
+    },
+    {
+      "sic_code": "64204",
+      "description": "Activities of distribution holding companies"
+    },
+    {
+      "sic_code": "64205",
+      "description": "Activities of financial services holding companies"
+    },
+    {
+      "sic_code": "64209",
+      "description": "Activities of other holding companies n.e.c."
+    },
+    {
+      "sic_code": "64301",
+      "description": "Activities of investment trusts"
+    },
+    {
+      "sic_code": "64302",
+      "description": "Activities of unit trusts"
+    },
+    {
+      "sic_code": "64303",
+      "description": "Activities of venture and development capital companies"
+    },
+    {
+      "sic_code": "64304",
+      "description": "Activities of open-ended investment companies"
+    },
+    {
+      "sic_code": "64305",
+      "description": "Activities of property unit trusts"
+    },
+    {
+      "sic_code": "64306",
+      "description": "Activities of real estate investment trusts"
+    },
+    {
+      "sic_code": "64910",
+      "description": "Financial leasing"
+    },
+    {
+      "sic_code": "64921",
+      "description": "Credit granting by non-deposit taking finance houses and other specialist consumer credit grantors"
+    },
+    {
+      "sic_code": "64922",
+      "description": "Activities of mortgage finance companies"
+    },
+    {
+      "sic_code": "64929",
+      "description": "Other credit granting n.e.c."
+    },
+    {
+      "sic_code": "64991",
+      "description": "Security dealing on own account"
+    },
+    {
+      "sic_code": "64992",
+      "description": "Factoring"
+    },
+    {
+      "sic_code": "64999",
+      "description": "Financial intermediation not elsewhere classified"
+    },
+    {
+      "sic_code": "65110",
+      "description": "Life insurance"
+    },
+    {
+      "sic_code": "65120",
+      "description": "Non-life insurance"
+    },
+    {
+      "sic_code": "65201",
+      "description": "Life reinsurance"
+    },
+    {
+      "sic_code": "65202",
+      "description": "Non-life reinsurance"
+    },
+    {
+      "sic_code": "65300",
+      "description": "Pension funding"
+    },
+    {
+      "sic_code": "66110",
+      "description": "Administration of financial markets"
+    },
+    {
+      "sic_code": "66120",
+      "description": "Security and commodity contracts dealing activities"
+    },
+    {
+      "sic_code": "66190",
+      "description": "Activities auxiliary to financial intermediation n.e.c."
+    },
+    {
+      "sic_code": "66210",
+      "description": "Risk and damage evaluation"
+    },
+    {
+      "sic_code": "66220",
+      "description": "Activities of insurance agents and brokers"
+    },
+    {
+      "sic_code": "66290",
+      "description": "Other activities auxiliary to insurance and pension funding"
+    },
+    {
+      "sic_code": "66300",
+      "description": "Fund management activities"
+    }
+  ],
+  "Real estate activities": [
+    {
+      "sic_code": "68100",
+      "description": "Buying and selling of own real estate"
+    },
+    {
+      "sic_code": "68201",
+      "description": "Renting and operating of Housing Association real estate"
+    },
+    {
+      "sic_code": "68202",
+      "description": "Letting and operating of conference and exhibition centres"
+    },
+    {
+      "sic_code": "68209",
+      "description": "Other letting and operating of own or leased real estate"
+    },
+    {
+      "sic_code": "68310",
+      "description": "Real estate agencies"
+    },
+    {
+      "sic_code": "68320",
+      "description": "Management of real estate on a fee or contract basis"
+    }
+  ],
+  "Professional, scientific and technical activities" : [
+    {
+      "sic_code": "69101",
+      "description": "Barristers at law"
+    },
+    {
+      "sic_code": "69102",
+      "description": "Solicitors"
+    },
+    {
+      "sic_code": "69109",
+      "description": "Activities of patent and copyright agents; other legal activities n.e.c."
+    },
+    {
+      "sic_code": "69201",
+      "description": "Accounting and auditing activities"
+    },
+    {
+      "sic_code": "69202",
+      "description": "Bookkeeping activities"
+    },
+    {
+      "sic_code": "69203",
+      "description": "Tax consultancy"
+    },
+    {
+      "sic_code": "70100",
+      "description": "Activities of head offices"
+    },
+    {
+      "sic_code": "70210",
+      "description": "Public relations and communications activities"
+    },
+    {
+      "sic_code": "70221",
+      "description": "Financial management"
+    },
+    {
+      "sic_code": "70229",
+      "description": "Management consultancy activities other than financial management"
+    },
+    {
+      "sic_code": "71111",
+      "description": "Architectural activities"
+    },
+    {
+      "sic_code": "71112",
+      "description": "Urban planning and landscape architectural activities"
+    },
+    {
+      "sic_code": "71121",
+      "description": "Engineering design activities for industrial process and production"
+    },
+    {
+      "sic_code": "71122",
+      "description": "Engineering related scientific and technical consulting activities"
+    },
+    {
+      "sic_code": "71129",
+      "description": "Other engineering activities"
+    },
+    {
+      "sic_code": "71200",
+      "description": "Technical testing and analysis"
+    },
+    {
+      "sic_code": "72110",
+      "description": "Research and experimental development on biotechnology"
+    },
+    {
+      "sic_code": "72190",
+      "description": "Other research and experimental development on natural sciences and engineering"
+    },
+    {
+      "sic_code": "72200",
+      "description": "Research and experimental development on social sciences and humanities"
+    },
+    {
+      "sic_code": "73110",
+      "description": "Advertising agencies"
+    },
+    {
+      "sic_code": "73120",
+      "description": "Media representation services"
+    },
+    {
+      "sic_code": "73200",
+      "description": "Market research and public opinion polling"
+    },
+    {
+      "sic_code": "74100",
+      "description": "specialised design activities"
+    },
+    {
+      "sic_code": "74201",
+      "description": "Portrait photographic activities"
+    },
+    {
+      "sic_code": "74202",
+      "description": "Other specialist photography"
+    },
+    {
+      "sic_code": "74203",
+      "description": "Film processing"
+    },
+    {
+      "sic_code": "74209",
+      "description": "Photographic activities not elsewhere classified"
+    },
+    {
+      "sic_code": "74300",
+      "description": "Translation and interpretation activities"
+    },
+    {
+      "sic_code": "74901",
+      "description": "Environmental consulting activities"
+    },
+    {
+      "sic_code": "74902",
+      "description": "Quantity surveying activities"
+    },
+    {
+      "sic_code": "74909",
+      "description": "Other professional, scientific and technical activities n.e.c."
+    },
+    {
+      "sic_code": "74990",
+      "description": "Non-trading company non trading"
+    },
+    {
+      "sic_code": "75000",
+      "description": "Veterinary activities"
+    }
+  ],
+  "Administrative and support service activities" : [
+    {
+      "sic_code": "77110",
+      "description": "Renting and leasing of cars and light motor vehicles"
+    },
+    {
+      "sic_code": "77120",
+      "description": "Renting and leasing of trucks and other heavy vehicles"
+    },
+    {
+      "sic_code": "77210",
+      "description": "Renting and leasing of recreational and sports goods"
+    },
+    {
+      "sic_code": "77220",
+      "description": "Renting of video tapes and disks"
+    },
+    {
+      "sic_code": "77291",
+      "description": "Renting and leasing of media entertainment equipment"
+    },
+    {
+      "sic_code": "77299",
+      "description": "Renting and leasing of other personal and household goods"
+    },
+    {
+      "sic_code": "77310",
+      "description": "Renting and leasing of agricultural machinery and equipment"
+    },
+    {
+      "sic_code": "77320",
+      "description": "Renting and leasing of construction and civil engineering machinery and equipment"
+    },
+    {
+      "sic_code": "77330",
+      "description": "Renting and leasing of office machinery and equipment (including computers)"
+    },
+    {
+      "sic_code": "77341",
+      "description": "Renting and leasing of passenger water transport equipment"
+    },
+    {
+      "sic_code": "77342",
+      "description": "Renting and leasing of freight water transport equipment"
+    },
+    {
+      "sic_code": "77351",
+      "description": "Renting and leasing of air passenger transport equipment"
+    },
+    {
+      "sic_code": "77352",
+      "description": "Renting and leasing of freight air transport equipment"
+    },
+    {
+      "sic_code": "77390",
+      "description": "Renting and leasing of other machinery, equipment and tangible goods n.e.c."
+    },
+    {
+      "sic_code": "77400",
+      "description": "Leasing of intellectual property and similar products, except copyright works"
+    },
+    {
+      "sic_code": "78101",
+      "description": "Motion picture, television and other theatrical casting activities"
+    },
+    {
+      "sic_code": "78109",
+      "description": "Other activities of employment placement agencies"
+    },
+    {
+      "sic_code": "78200",
+      "description": "Temporary employment agency activities"
+    },
+    {
+      "sic_code": "78300",
+      "description": "Human resources provision and management of human resources functions"
+    },
+    {
+      "sic_code": "79110",
+      "description": "Travel agency activities"
+    },
+    {
+      "sic_code": "79120",
+      "description": "Tour operator activities"
+    },
+    {
+      "sic_code": "79901",
+      "description": "Activities of tourist guides"
+    },
+    {
+      "sic_code": "79909",
+      "description": "Other reservation service activities n.e.c."
+    },
+    {
+      "sic_code": "80100",
+      "description": "Private security activities"
+    },
+    {
+      "sic_code": "80200",
+      "description": "Security systems service activities"
+    },
+    {
+      "sic_code": "80300",
+      "description": "Investigation activities"
+    },
+    {
+      "sic_code": "81100",
+      "description": "Combined facilities support activities"
+    },
+    {
+      "sic_code": "81210",
+      "description": "General cleaning of buildings"
+    },
+    {
+      "sic_code": "81221",
+      "description": "Window cleaning services"
+    },
+    {
+      "sic_code": "81222",
+      "description": "Specialised cleaning services"
+    },
+    {
+      "sic_code": "81223",
+      "description": "Furnace and chimney cleaning services"
+    },
+    {
+      "sic_code": "81229",
+      "description": "Other building and industrial cleaning activities"
+    },
+    {
+      "sic_code": "81291",
+      "description": "Disinfecting and exterminating services"
+    },
+    {
+      "sic_code": "81299",
+      "description": "Other cleaning services"
+    },
+    {
+      "sic_code": "81300",
+      "description": "Landscape service activities"
+    },
+    {
+      "sic_code": "82110",
+      "description": "Combined office administrative service activities"
+    },
+    {
+      "sic_code": "82190",
+      "description": "Photocopying, document preparation and other specialised office support activities"
+    },
+    {
+      "sic_code": "82200",
+      "description": "Activities of call centres"
+    },
+    {
+      "sic_code": "82301",
+      "description": "Activities of exhibition and fair organisers"
+    },
+    {
+      "sic_code": "82302",
+      "description": "Activities of conference organisers"
+    },
+    {
+      "sic_code": "82911",
+      "description": "Activities of collection agencies"
+    },
+    {
+      "sic_code": "82912",
+      "description": "Activities of credit bureaus"
+    },
+    {
+      "sic_code": "82920",
+      "description": "Packaging activities"
+    },
+    {
+      "sic_code": "82990",
+      "description": "Other business support service activities n.e.c."
+    }
+  ],
+  "Public administration and defence; compulsory social security" : [
+    {
+      "sic_code": "84110",
+      "description": "General public administration activities"
+    },
+    {
+      "sic_code": "84120",
+      "description": "Regulation of health care, education, cultural and other social services, not incl. social security"
+    },
+    {
+      "sic_code": "84130",
+      "description": "Regulation of and contribution to more efficient operation of businesses"
+    },
+    {
+      "sic_code": "84210",
+      "description": "Foreign affairs"
+    },
+    {
+      "sic_code": "84220",
+      "description": "Defence activities"
+    },
+    {
+      "sic_code": "84230",
+      "description": "Justice and judicial activities"
+    },
+    {
+      "sic_code": "84240",
+      "description": "Public order and safety activities"
+    },
+    {
+      "sic_code": "84250",
+      "description": "Fire service activities"
+    },
+    {
+      "sic_code": "84300",
+      "description": "Compulsory social security activities"
+    }
+  ],
+  "Education" : [
+    {
+      "sic_code": "85100",
+      "description": "Pre-primary education"
+    },
+    {
+      "sic_code": "85200",
+      "description": "Primary education"
+    },
+    {
+      "sic_code": "85310",
+      "description": "General secondary education"
+    },
+    {
+      "sic_code": "85320",
+      "description": "Technical and vocational secondary education"
+    },
+    {
+      "sic_code": "85410",
+      "description": "Post-secondary non-tertiary education"
+    },
+    {
+      "sic_code": "85421",
+      "description": "First-degree level higher education"
+    },
+    {
+      "sic_code": "85422",
+      "description": "Post-graduate level higher education"
+    },
+    {
+      "sic_code": "85510",
+      "description": "Sports and recreation education"
+    },
+    {
+      "sic_code": "85520",
+      "description": "Cultural education"
+    },
+    {
+      "sic_code": "85530",
+      "description": "Driving school activities"
+    },
+    {
+      "sic_code": "85590",
+      "description": "Other education n.e.c."
+    },
+    {
+      "sic_code": "85600",
+      "description": "Educational support services"
+    }
+  ],
+  "Human health and social work activities" : [
+    {
+      "sic_code": "86101",
+      "description": "Hospital activities"
+    },
+    {
+      "sic_code": "86102",
+      "description": "Medical nursing home activities"
+    },
+    {
+      "sic_code": "86210",
+      "description": "General medical practice activities"
+    },
+    {
+      "sic_code": "86220",
+      "description": "Specialists medical practice activities"
+    },
+    {
+      "sic_code": "86230",
+      "description": "Dental practice activities"
+    },
+    {
+      "sic_code": "86900",
+      "description": "Other human health activities"
+    },
+    {
+      "sic_code": "87100",
+      "description": "Residential nursing care facilities"
+    },
+    {
+      "sic_code": "87200",
+      "description": "Residential care activities for learning difficulties, mental health and substance abuse"
+    },
+    {
+      "sic_code": "87300",
+      "description": "Residential care activities for the elderly and disabled"
+    },
+    {
+      "sic_code": "87900",
+      "description": "Other residential care activities n.e.c."
+    },
+    {
+      "sic_code": "88100",
+      "description": "Social work activities without accommodation for the elderly and disabled"
+    },
+    {
+      "sic_code": "88910",
+      "description": "Child day-care activities"
+    },
+    {
+      "sic_code": "88990",
+      "description": "Other social work activities without accommodation n.e.c."
+    }
+  ],
+  "Arts, entertainment and recreation" : [
+    {
+      "sic_code": "90010",
+      "description": "Performing arts"
+    },
+    {
+      "sic_code": "90020",
+      "description": "Support activities to performing arts"
+    },
+    {
+      "sic_code": "90030",
+      "description": "Artistic creation"
+    },
+    {
+      "sic_code": "90040",
+      "description": "Operation of arts facilities"
+    },
+    {
+      "sic_code": "91011",
+      "description": "Library activities"
+    },
+    {
+      "sic_code": "91012",
+      "description": "Archives activities"
+    },
+    {
+      "sic_code": "91020",
+      "description": "Museums activities"
+    },
+    {
+      "sic_code": "91030",
+      "description": "Operation of historical sites and buildings and similar visitor attractions"
+    },
+    {
+      "sic_code": "91040",
+      "description": "Botanical and zoological gardens and nature reserves activities"
+    },
+    {
+      "sic_code": "92000",
+      "description": "Gambling and betting activities"
+    },
+    {
+      "sic_code": "93110",
+      "description": "Operation of sports facilities"
+    },
+    {
+      "sic_code": "93120",
+      "description": "Activities of sport clubs"
+    },
+    {
+      "sic_code": "93130",
+      "description": "Fitness facilities"
+    },
+    {
+      "sic_code": "93191",
+      "description": "Activities of racehorse owners"
+    },
+    {
+      "sic_code": "93199",
+      "description": "Other sports activities"
+    },
+    {
+      "sic_code": "93210",
+      "description": "Activities of amusement parks and theme parks"
+    },
+    {
+      "sic_code": "93290",
+      "description": "Other amusement and recreation activities n.e.c."
+    }
+  ],
+  "Other service activities" : [
+    {
+      "sic_code": "94110",
+      "description": "Activities of business and employers membership organisations"
+    },
+    {
+      "sic_code": "94120",
+      "description": "Activities of professional membership organisations"
+    },
+    {
+      "sic_code": "94200",
+      "description": "Activities of trade unions"
+    },
+    {
+      "sic_code": "94910",
+      "description": "Activities of religious organisations"
+    },
+    {
+      "sic_code": "94920",
+      "description": "Activities of political organisations"
+    },
+    {
+      "sic_code": "94990",
+      "description": "Activities of other membership organisations n.e.c."
+    },
+    {
+      "sic_code": "95110",
+      "description": "Repair of computers and peripheral equipment"
+    },
+    {
+      "sic_code": "95120",
+      "description": "Repair of communication equipment"
+    },
+    {
+      "sic_code": "95210",
+      "description": "Repair of consumer electronics"
+    },
+    {
+      "sic_code": "95220",
+      "description": "Repair of household appliances and home and garden equipment"
+    },
+    {
+      "sic_code": "95230",
+      "description": "Repair of footwear and leather goods"
+    },
+    {
+      "sic_code": "95240",
+      "description": "Repair of furniture and home furnishings"
+    },
+    {
+      "sic_code": "95250",
+      "description": "Repair of watches, clocks and jewellery"
+    },
+    {
+      "sic_code": "95290",
+      "description": "Repair of personal and household goods n.e.c."
+    },
+    {
+      "sic_code": "96010",
+      "description": "Washing and (dry-)cleaning of textile and fur products"
+    },
+    {
+      "sic_code": "96020",
+      "description": "Hairdressing and other beauty treatment"
+    },
+    {
+      "sic_code": "96030",
+      "description": "Funeral and related activities"
+    },
+    {
+      "sic_code": "96040",
+      "description": "Physical well-being activities"
+    },
+    {
+      "sic_code": "96090",
+      "description": "Other service activities n.e.c."
+    }
+  ],
+  "Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use": [
+    {
+      "sic_code": "97000",
+      "description": "Activities of households as employers of domestic personnel"
+    },
+    {
+      "sic_code": "98000",
+      "description": "Residents property management"
+    },
+    {
+      "sic_code": "98100",
+      "description": "Undifferentiated goods-producing activities of private households for own use"
+    },
+    {
+      "sic_code": "98200",
+      "description": "Undifferentiated service-producing activities of private households for own use"
+    }
+  ],
+  "Activities of extraterritorial organisations and bodies": [
+    {
+      "sic_code": "99000",
+      "description": "Activities of extraterritorial organisations and bodies"
+    },
+    {
+      "sic_code": "99999",
+      "description": "Dormant Company"
+    }
+  ]
+}
