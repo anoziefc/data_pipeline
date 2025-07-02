@@ -7,3 +7,4 @@ ftp.py
 *.log
 Tax_Default
 api_key
+data.json

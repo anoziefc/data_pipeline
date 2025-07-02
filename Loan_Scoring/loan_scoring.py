@@ -6,6 +6,7 @@ import json
 import re
 from Models.models import *
 from typing import Dict, Optional, Any
+from aiolimiter import AsyncLimiter
 
 
 class Prompt:
@@ -215,7 +216,7 @@ def extract_and_inject_json(completion: Dict[str, Any]) -> Dict[str, Any]:
         raise ValueError(f"Error extracting valid JSON from content: {e}")
 
 
-async def run_loan_scoring(logger, data: Dict[str, Any]):
+async def run_loan_scoring(logger, data: Dict[str, Any], limiter: Optional[AsyncLimiter] = None):
     perplexity_api_key = os.environ.get("PERPLEXITY_API_KEY")
     if not perplexity_api_key:
         logger.error("Error: PERPLEXITY_API_KEY environment variable not set.")
@@ -228,7 +229,12 @@ async def run_loan_scoring(logger, data: Dict[str, Any]):
                 prompt_obj = Prompt(business_details=company["company_info"])
                 perplexity_chat = PerplexityChat(api_key=perplexity_api_key, prompt=prompt_obj)
                 async with aiohttp.ClientSession() as session:
-                    content, status = await perplexity_chat.send_request(session)
+                    if limiter:
+                        async with limiter:
+                            content, status = await perplexity_chat.send_request(session)
+                    else:
+                            content, status = await perplexity_chat.send_request(session)
+
                     title = f"Loan Score for {company["company_info"]["company_name"]}"
                     if content and content.strip().startswith("{"):
                         try:
@@ -247,7 +253,12 @@ async def run_loan_scoring(logger, data: Dict[str, Any]):
                 prompt_obj = Prompt(business_details=company)
                 perplexity_chat = PerplexityChat(api_key=perplexity_api_key, prompt=prompt_obj)
                 async with aiohttp.ClientSession() as session:
-                    content, status = await perplexity_chat.send_request(session)
+                    if limiter:
+                        async with limiter:
+                            content, status = await perplexity_chat.send_request(session)
+                    else:
+                            content, status = await perplexity_chat.send_request(session)
+
                     title = f"Loan Score for {company}"
                     if content and content.strip().startswith("{"):
                             try:

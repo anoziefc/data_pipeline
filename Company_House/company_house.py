@@ -87,6 +87,7 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp
                 else:
+                    error_text = await resp.text()
                     raise aiohttp.ClientResponseError(
                         status=resp.status,
                         message=f"Company House API returned {resp.status}: {error_text}",
@@ -105,6 +106,7 @@ class CompanyHouseAPI:
                     json_resp = await resp.json()
                     return json_resp
                 else:
+                    error_text = await resp.text()
                     raise aiohttp.ClientResponseError(
                         status=resp.status,
                         message=f"Company House API returned {resp.status}: {error_text}",

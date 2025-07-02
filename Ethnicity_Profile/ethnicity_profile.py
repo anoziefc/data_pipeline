@@ -5,6 +5,7 @@ import aiohttp
 import asyncio
 import json
 import os
+from aiolimiter import AsyncLimiter
 
 
 class AnswerFormat(BaseModel):
@@ -128,7 +129,7 @@ class GeminiChat:
             print(f"An unexpected error occurred: {e}")
             raise RuntimeError("Unexpected error during API call to Gemini") from e
 
-async def run_ethnicity_check(logger, data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+async def run_ethnicity_check(logger, data: Dict[str, Any], limiter: Optional[AsyncLimiter] = None) -> Optional[Dict[str, Any]]:
     gemini_api_key = os.environ.get("DANIEL_GEMINI_KEY")
     if not gemini_api_key:
         logger.error("Error: DANIEL_GEMINI_KEY environment variable not set.")
@@ -151,7 +152,11 @@ async def run_ethnicity_check(logger, data: Dict[str, Any]) -> Optional[Dict[str
                     prompt = Prompt(name)
                     ethnicity_chat = GeminiChat(gemini_api_key, prompt)
                     logger.info(f"Processing: {name}")
-                    response = await ethnicity_chat.send_request(session)
+                    if limiter:
+                        async with limiter:
+                            response = await ethnicity_chat.send_request(session)
+                    else:
+                        response = await ethnicity_chat.send_request(session)
                     if response:
                         title = f"Ethnicity of {name}"
                         data[title] = response.model_dump()

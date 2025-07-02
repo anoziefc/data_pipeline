@@ -89,7 +89,7 @@ async def runner(path, file_name, log_file, config, task_to_run, rate_limit, max
     return pipeline
 
 async def stage_one(path, file_name, log_file, config, run_process, match_data):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(1, 5), max_concurrent_sessions=1)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(2, 1), max_concurrent_sessions=1)
     runner_instance.state.save_checkpoint(log_file, config)
 
     ret = Path("data/matched/matched.json")
@@ -152,9 +152,9 @@ async def main():
     
     matched_data = await stage_one(stage_one_path, stage_one_file_name, logger, CONFIG, run_business_profiling, dt)
     enriched_data = await stage_two(stage_two_path, stage_two_file_name, logger, CONFIG, run_ethnicity_check)
-    stage_three_path = enriched_data.parent
-    stage_three_file_name = enriched_data.stem
-    final_json = await stage_three(stage_three_path, stage_three_file_name, logger, CONFIG, run_loan_scoring)
+    # stage_three_path = enriched_data.parent
+    # stage_three_file_name = enriched_data.stem
+    # final_json = await stage_three(stage_three_path, stage_three_file_name, logger, CONFIG, run_loan_scoring)
 
     # all_data = flatten_all_people_to_dataframe(final_json)
     # # all_data = flatten_all_people_to_dataframe(Path('data/result.json'))
