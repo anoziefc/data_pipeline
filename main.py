@@ -21,12 +21,13 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 CONFIG = {
-    "TRUSTPILOT_DATA_PATH": Path("data/trust_pilot/data.json"),
-    "TAX_DEFAULTERS_DATA_PATH": Path("data/tax_defaulters/data.json"),
-    "BIDSTATS_DATA_PATH": Path("data/bidstats/data.json"),
+    "TRUSTPILOT_DATA_PATH": Path("data/trust_pilot/trust_pilot.json"),
+    "TAX_DEFAULTERS_DATA_PATH": Path("data/tax_defaulters/tax_defaulters.json"),
+    "BIDSTATS_DATA_PATH": Path("data/bidstats/bidstats.json"),
     "MATCHED": Path("data/matched/matched.json"),
     "SOURCE_DATA_PATH": Path("data/data.json"),
     "RESPONSE_DATA_PATH": Path("data/result.json"),
+    "ENRICHED_DATA_PATH": Path("data/enriched/enriched.json"),
     "CHECKPOINT_DIR": Path("checkpoints/"),
     "CHECKPOINT_INTERVAL": 50,
     "QUEUE_SIZE": 100,
@@ -112,7 +113,7 @@ async def stage_two(path, file_name, log_file, config, run_process):
         log_file.error(f"Failed to save results: {e}", exc_info=True)
 
 async def stage_three(path, file_name, log_file, config, run_process):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(9, 1), max_concurrent_sessions=1)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(6, 1), max_concurrent_sessions=20)
     runner_instance.state.save_checkpoint(log_file, config)
     try:
         with open(config["RESPONSE_DATA_PATH"], "w", encoding="utf-8") as f:
@@ -129,7 +130,8 @@ async def main():
         ("trust_pilot", CONFIG["TRUSTPILOT_DATA_PATH"].parent),
         ("bidstats", CONFIG["BIDSTATS_DATA_PATH"].parent),
         ("tax_defaulters", CONFIG["TAX_DEFAULTERS_DATA_PATH"].parent),
-        ("matched", CONFIG["MATCHED"].parent)
+        ("matched", CONFIG["MATCHED"].parent),
+        ("enriched", CONFIG["ENRICHED_DATA_PATH"].parent)
     ]
 
     first_stage_list = ["trust_pilot", "bidstats", "tax_defaulters"]
@@ -151,10 +153,10 @@ async def main():
         json.dump(dt, ff, indent=4)
     
     # matched_data = await stage_one(stage_one_path, stage_one_file_name, logger, CONFIG, run_business_profiling, dt)
-    enriched_data = await stage_two(stage_two_path, stage_two_file_name, logger, CONFIG, run_ethnicity_check)
-    # stage_three_path = enriched_data.parent
-    # stage_three_file_name = enriched_data.stem
-    # final_json = await stage_three(stage_three_path, stage_three_file_name, logger, CONFIG, run_loan_scoring)
+    # enriched_data = await stage_two(stage_two_path, stage_two_file_name, logger, CONFIG, run_ethnicity_check)
+    stage_three_path = dataset_paths[5][0]
+    stage_three_file_name = dataset_paths[5][1]
+    final_json = await stage_three(stage_three_path, stage_three_file_name, logger, CONFIG, run_loan_scoring)
 
     # all_data = flatten_all_people_to_dataframe(final_json)
     # # all_data = flatten_all_people_to_dataframe(Path('data/result.json'))

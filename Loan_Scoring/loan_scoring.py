@@ -275,24 +275,6 @@ async def run_loan_scoring(logger, data: Dict[str, Any], limiter: Optional[Async
     return data
 
 
-# async def main():
-#     url = "https://api.perplexity.ai/chat/completions"
-
-#     payload = {
-#         "model": "sonar-reasoning",
-#         "messages": [
-#             {"role": "user", "content": "Provide an in-depth analysis of the impact of AI on global job markets over the next decade."}
-#         ],
-#         "max_tokens": 500
-#     }
-#     headers = {
-#         "Authorization": "Bearer <token>",
-#         "Content-Type": "application/json"
-#     }
-
-#     response = requests.post(url, json=payload, headers=headers)
-#     print(response.json())
-
 async def main():
     lst = [
         "Fresh Flower Scent Franchise Ltd",
