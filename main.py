@@ -28,9 +28,9 @@ CONFIG = {
     "SOURCE_DATA_PATH": Path("data/data.json"),
     "RESPONSE_DATA_PATH": Path("data/result.json"),
     "CHECKPOINT_DIR": Path("checkpoints/"),
-    "CHECKPOINT_INTERVAL": 5,
-    "QUEUE_SIZE": 10,
-    "MAX_CONCURRENT_REQUESTS": 1
+    "CHECKPOINT_INTERVAL": 50,
+    "QUEUE_SIZE": 100,
+    "MAX_CONCURRENT_REQUESTS": 50
 }
 
 def prepare_file(file_path: Path, result_data: List):
@@ -100,7 +100,7 @@ async def stage_one(path, file_name, log_file, config, run_process, match_data):
     return matched
 
 async def stage_two(path, file_name, log_file, config, run_process):
-    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(9, 1), max_concurrent_sessions=2)
+    runner_instance = await runner(path, file_name, log_file, config, run_process, rate_limit=(20, 1), max_concurrent_sessions=50)
     runner_instance.state.save_checkpoint(log_file, config)
     try:
         ret = Path("data/enriched/enriched.json")
@@ -150,7 +150,7 @@ async def main():
     with open(stage_one_file, "w") as ff:
         json.dump(dt, ff, indent=4)
     
-    matched_data = await stage_one(stage_one_path, stage_one_file_name, logger, CONFIG, run_business_profiling, dt)
+    # matched_data = await stage_one(stage_one_path, stage_one_file_name, logger, CONFIG, run_business_profiling, dt)
     enriched_data = await stage_two(stage_two_path, stage_two_file_name, logger, CONFIG, run_ethnicity_check)
     # stage_three_path = enriched_data.parent
     # stage_three_file_name = enriched_data.stem
