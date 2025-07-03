@@ -154,8 +154,8 @@ async def main():
     
     # matched_data = await stage_one(stage_one_path, stage_one_file_name, logger, CONFIG, run_business_profiling, dt)
     # enriched_data = await stage_two(stage_two_path, stage_two_file_name, logger, CONFIG, run_ethnicity_check)
-    stage_three_path = dataset_paths[5][0]
-    stage_three_file_name = dataset_paths[5][1]
+    stage_three_file_name = dataset_paths[5][0]
+    stage_three_path = dataset_paths[5][1]
     final_json = await stage_three(stage_three_path, stage_three_file_name, logger, CONFIG, run_loan_scoring)
 
     # all_data = flatten_all_people_to_dataframe(final_json)
