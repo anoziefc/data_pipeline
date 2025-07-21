@@ -103,23 +103,6 @@ class PerplexityChat:
 
 
 def extract_json_from_markdown_reasoning(response: str) -> Dict[str, Any]:
-    """
-    Extracts and returns only the valid JSON part from a response object.
-    
-    This function assumes that the response has a structure where the valid JSON
-    is included in the 'content' field of the first choice's message, after the 
-    closing "</think>" marker. Any markdown code fences (e.g. ```json) are stripped.
-
-    Parameters:
-        response (dict): The full API response object.
-
-    Returns:
-        dict: The parsed JSON object extracted from the content.
-    
-    Raises:
-        ValueError: If no valid JSON can be parsed from the content.
-    """
-
     marker = "</think>"
     idx = response.rfind(marker)
     
@@ -157,26 +140,7 @@ def extract_json_from_markdown(text):
         print("No JSON found in the string.")
         return None
 
-
 def extract_and_inject_json(completion: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Extracts the valid JSON portion from the 'content' field in the first choice's message
-    of the completion object and injects the parsed JSON back into that message.
-    
-    This function handles cases where the content may include extraneous text such as 
-    markdown code fences (e.g., "```json"), additional text before/after the JSON, or
-    other noise. If the JSON is present and valid, it will be extracted; if it is malformed,
-    an error will be raised.
-    
-    Parameters:
-        completion (dict): The completion object containing a "choices" list with a message.
-    
-    Returns:
-        dict: The updated completion object with the "content" field replaced by the parsed JSON.
-    
-    Raises:
-        ValueError: If no valid JSON can be extracted or parsed.
-    """
     try:
         raw_content = completion.strip()
 
@@ -273,65 +237,3 @@ async def run_loan_scoring(logger, data: Dict[str, Any], limiter: Optional[Async
                             logger.error("Received empty or invalid response:", repr(content))
                             data[title] = {}
     return data
-
-
-async def main():
-    lst = [
-        "Fresh Flower Scent Franchise Ltd",
-        "E-TEK ELECTRICAL SERVICES LTD",
-        "Yorkshire Rose Tyres",
-        "KRYPTON CONSULTING LTD",
-        "CHOICE OF TASTE RESTAURANTS LTD",
-        "NORMZ PLUMBING LTD",
-        "Liverbird",
-        "PJTC LTD",
-        "AFRO WIGHT LTD",
-        "SPRING FOUNTAIN (PRIVATE) LIMITED",
-        "Marchee Jotalima Ltd",
-        "REVELATION SOCIAL CARE LTD",
-        "Magedtons International",
-        "Joelle Cleaning Services",
-        "Tres Jolie",
-        "Olsights",
-        "1Construct - New Deal",
-        "Tree of Life Accomodation",
-        "Lulu Bakeshop"
-    ]
-
-    data = {}
-
-    perplexity_api_key = os.environ.get("PERPLEXITY_API_KEY")
-    if not perplexity_api_key:
-        print("Error: PERPLEXITY_API_KEY environment variable not set.")
-        return
-
-    for dt in lst:
-        prompt_obj = Prompt(business_details=dt)
-        perplexity_chat = PerplexityChat(api_key=perplexity_api_key, prompt=prompt_obj)
-
-        async with aiohttp.ClientSession() as session:
-            content, status = await perplexity_chat.send_request(session)
-            title = f"Loan Score for {dt}"
-            if content and content.strip().startswith("{"):
-                try:
-                    resp = json.loads(content)
-                    data[dt] = resp
-                except json.JSONDecodeError as e:
-                    print("JSON decoding failed:", e)
-                    resp = {}
-                    data[dt] = resp
-            else:
-                try:
-                    resp = extract_json_from_markdown_reasoning(content)
-                    data[dt] = resp
-                except Exception as e:
-                    print("Received empty or invalid response:", repr(content))
-                    resp = {}
-                    data[dt] = resp
-    
-    with open("resp.json", "w") as respFile:
-        json.dump(data, respFile, indent=4)
-
-
-if __name__ == "__main__":
-    asyncio.run(main())

@@ -166,32 +166,3 @@ async def run_ethnicity_check(logger, data: Dict[str, Any], limiter: Optional[As
             logger.warning(f"Ethnicity check failed for data: {e}", exc_info=True)
             return None
     return data
-
-async def main():
-    owner_name = "Benjamin Shane Lovegrove"
-
-    gemini_api_key = os.environ.get("DANIEL_GEMINI_KEY")
-    if not gemini_api_key:
-        print("Error: DANIEL_GEMINI_KEY environment variable not set.")
-        return
-
-    async with aiohttp.ClientSession() as session:
-        try:
-            prompt = Prompt(owner_name)
-            gemini_chat = GeminiChat(gemini_api_key, prompt)
-            print(f"Processing: {owner_name}")
-            response = await gemini_chat.send_request(session)
-            if response:
-                print(f"Result for {owner_name}:")
-                print(f"  Full Name: {response.full_name}")
-                print(f"  Ethnicity: {response.ethnicity}")
-                print(f"  Skin Colour: {response.skin_colour}")
-                print("\nJSON representation:")
-                print(response.model_dump_json(indent=2))
-            else:
-                print(f"No result for {owner_name}")
-        except Exception as e:
-            print(f"An error occurred in main: {e}")
-
-if __name__ == "__main__":
-    asyncio.run(main())

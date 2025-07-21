@@ -53,22 +53,4 @@ def match_companies(dataset1: List[List[Dict]], dataset2: List[Dict]) -> List[Di
                 "source": source
             })
 
-
-
     return matched_data
-
-
-if __name__ == "__main__":
-    path1 = Path("data/result.json")
-    path2 = Path("data/data.json")
-    ret = Path("data/matched.json")
-
-    with open(path1, "r") as p1:
-        dataset1 = json.loads(p1.read())
-    
-    with open(path2, "r") as p2:
-        dataset2 = json.loads(p2.read())
-
-    matched = match_companies(dataset1, dataset2)
-    with open(ret, "w") as f:
-        json.dump(matched, f, indent=4)

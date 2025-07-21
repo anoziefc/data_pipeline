@@ -8,3 +8,4 @@ ftp.py
 Tax_Default
 api_key
 data.json
+data/*

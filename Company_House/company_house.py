@@ -75,7 +75,6 @@ class CompanyHouseAPI:
                         request_info=resp.request_info,
                         history=resp.history
                     )
-                    print(f"❌ Error Company Search {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")
 
@@ -94,7 +93,6 @@ class CompanyHouseAPI:
                         request_info=resp.request_info,
                         history=resp.history
                     )
-                    print(f"❌ Error Company Details {resp.status}: {await resp.text()}")
         except Exception as e:
             print(f"Exception occurred: {e}")
 
@@ -112,8 +110,7 @@ class CompanyHouseAPI:
                         message=f"Company House API returned {resp.status}: {error_text}",
                         request_info=resp.request_info,
                         history=resp.history
-                    )                    
-                    print(f"❌ Error Fetch Link {resp.status}: {await resp.text()}")
+                    )
         except Exception as e:
             print(f"Exception occurred: {e}")
 
@@ -132,7 +129,6 @@ class CompanyHouseAPI:
                 if not company_details:
                     raise ValueError("Company details not found.")
 
-                # Company Info
                 company_info = CompanyInfo(
                     company_name=company_details.get("company_name", ""),
                     company_number=company_details.get("company_number", ""),
@@ -145,7 +141,6 @@ class CompanyHouseAPI:
                     vat_registered="No"
                 )
 
-                # Filing Info
                 filing_info = FilingInfo()
                 filing_history_link = company_details.get("links", {}).get("filing_history")
                 if filing_history_link:
@@ -158,7 +153,6 @@ class CompanyHouseAPI:
                             filing_info.account_filing_in_past_month = "Yes" if self.is_last_month(date_str) else "No"
                             filing_info.months_since_last_filing = self.months_diff(date_str)
 
-                # Director Info
                 director_info = DirectorInfo()
                 officers_link = company_details.get("links", {}).get("officers")
                 if officers_link:
@@ -176,7 +170,6 @@ class CompanyHouseAPI:
                             if d.get("officer_role") == "director" and not d.get("resigned_on")
                         ]
 
-                # Legal Info
                 legal_info = None
                 charges_link = company_details.get("links", {}).get("charges")
                 if charges_link:
@@ -197,7 +190,7 @@ class CompanyHouseAPI:
                 )
 
             except Exception as e:
-                print(f"⚠️ Exception in CompanyHouseAPI.run(): {e}")
+                print(f"Exception in CompanyHouseAPI.run(): {e}")
 
                 return BusinessProfile(
                     company_info=CompanyInfo(),
@@ -205,7 +198,6 @@ class CompanyHouseAPI:
                     filing_info=FilingInfo(),
                     legal_info=None
                 )
-
 
 async def run_business_profiling(logger, data: Dict[str, Any], limiter: Optional[AsyncLimiter] = None) -> Optional[Dict[str, Any]]:
     COMPANY_HOUSE_API_KEY = os.environ.get("COMPANY_HOUSE_API_KEY")
@@ -230,24 +222,3 @@ async def run_business_profiling(logger, data: Dict[str, Any], limiter: Optional
                 retVal.append(retval)
             break
     return retVal
-
-async def main():
-    query_params = {
-        "company_name_includes": "M & W Property Services Limited",
-        "company_status": "active",
-        "location": "Aylesbury"
-    }
-    q = {'company_name_includes': 'THOMAS BRADLEY FS LIMITED'}
-
-    API_KEY = "bb7f9e56-275c-4b33-a1d5-50d0e6e1c35d"
-    auth = base64.b64encode(f"{API_KEY}:".encode()).decode()
-    headers = {
-        "Authorization": f"Basic {auth}",
-        "Accept": "application/json"
-    }
-
-    new_company = CompanyHouseAPI()
-    retval = await new_company.run(headers, q)
-
-if __name__ == "__main__":
-    asyncio.run(main())
