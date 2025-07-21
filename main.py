@@ -9,7 +9,6 @@ from Company_House.company_house import run_business_profiling
 from Ethnicity_Profile.ethnicity_profile import run_ethnicity_check
 from Loan_Scoring.loan_scoring import run_loan_scoring
 from typing import List
-# from convert_to_csv import flatten_all_people_to_dataframe
 from aiolimiter import AsyncLimiter
 
 
